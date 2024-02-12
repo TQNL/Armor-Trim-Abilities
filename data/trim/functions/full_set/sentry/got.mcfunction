@@ -1,0 +1,3 @@
+tag @s add full_set_sentry
+execute unless entity @s[tag=trim_got_item] unless entity @p[nbt={SelectedItem:{id:"minecraft:crossbow",tag:{trim_sentry_crossbow:1b}}}] run give @s crossbow{trim_abilities:1b,display:{Name:'{"text":"Sentry Crossbow","italic":false}'},Unbreakable:1b,trim_sentry_crossbow:1b,Enchantments:[{id:"minecraft:multishot",lvl:1s},{id:"minecraft:piercing",lvl:4s},{id:"minecraft:quick_charge",lvl:5s}]} 1
+tag @s add trim_got_item

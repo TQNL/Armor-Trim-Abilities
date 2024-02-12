@@ -1,0 +1,14 @@
+{
+  "parent": "trim:trim_abilities/root",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:fishing_rod_hooked"
+    }
+  },
+  "rewards": {
+    "function": "trim:full_set/coast/fish",
+    "loot": [
+      "minecraft:gameplay/fishing"
+    ]
+  }
+}

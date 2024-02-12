@@ -1,0 +1,4 @@
+for new updates:
+- new structures/other loot table updates
+    - insert loot table with bonus roll and its advancement
+    - update ore changes and such

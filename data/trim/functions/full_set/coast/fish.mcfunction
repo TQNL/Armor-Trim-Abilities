@@ -1,0 +1,1 @@
+advancement revoke @s only trim:trim_abilities/fishing_bonus
