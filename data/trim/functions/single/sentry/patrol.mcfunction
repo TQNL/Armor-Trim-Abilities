@@ -1,9 +1,9 @@
 scoreboard players reset @s pillager_summon
-execute on attacker at @s run summon pillager ~ ~ ~ {Tags:["sentry_trim"],PatrolLeader:0b,Patrolling:1b,CanJoinRaid:0b,HandItems:[{id:"minecraft:crossbow",Count:1b,tag:{Damage:0}},{}]}
-execute on attacker at @s run summon pillager ~ ~ ~ {Tags:["sentry_trim"],PatrolLeader:0b,Patrolling:1b,CanJoinRaid:0b,HandItems:[{id:"minecraft:crossbow",Count:1b,tag:{Damage:0}},{}]}
-execute on attacker at @s run summon pillager ~ ~ ~ {Tags:["sentry_trim"],PatrolLeader:0b,Patrolling:1b,CanJoinRaid:0b,HandItems:[{id:"minecraft:crossbow",Count:1b,tag:{Damage:0}},{}]}
-execute on attacker at @s run summon pillager ~ ~ ~ {Tags:["sentry_trim"],PatrolLeader:0b,Patrolling:1b,CanJoinRaid:0b,HandItems:[{id:"minecraft:crossbow",Count:1b,tag:{Damage:0}},{}]}
-execute on attacker at @s run summon pillager ~ ~ ~ {Tags:["sentry_trim"],PatrolLeader:0b,Patrolling:1b,CanJoinRaid:0b,HandItems:[{id:"minecraft:crossbow",Count:1b,tag:{Damage:0}},{}]}
+execute on attacker at @s run summon pillager ~ ~ ~ {Tags:["sentry_trim"],PatrolLeader:0b,Patrolling:1b,CanJoinRaid:0b,HandItems:[{id:"minecraft:crossbow",count:1,tag:{Damage:0}},{}]}
+execute on attacker at @s run summon pillager ~ ~ ~ {Tags:["sentry_trim"],PatrolLeader:0b,Patrolling:1b,CanJoinRaid:0b,HandItems:[{id:"minecraft:crossbow",count:1,tag:{Damage:0}},{}]}
+execute on attacker at @s run summon pillager ~ ~ ~ {Tags:["sentry_trim"],PatrolLeader:0b,Patrolling:1b,CanJoinRaid:0b,HandItems:[{id:"minecraft:crossbow",count:1,tag:{Damage:0}},{}]}
+execute on attacker at @s run summon pillager ~ ~ ~ {Tags:["sentry_trim"],PatrolLeader:0b,Patrolling:1b,CanJoinRaid:0b,HandItems:[{id:"minecraft:crossbow",count:1,tag:{Damage:0}},{}]}
+execute on attacker at @s run summon pillager ~ ~ ~ {Tags:["sentry_trim"],PatrolLeader:0b,Patrolling:1b,CanJoinRaid:0b,HandItems:[{id:"minecraft:crossbow",count:1,tag:{Damage:0}},{}]}
 
 execute as @e[type=pillager,tag=sentry_trim] run effect give @s regeneration 10
 execute as @e[type=pillager,tag=sentry_trim] run effect give @s resistance 2 2

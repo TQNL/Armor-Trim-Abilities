@@ -6,13 +6,13 @@ execute at @p as @e[type=fishing_bobber,sort=nearest,limit=1] on origin if entit
 #   - cant check from which gear the mob had, so that functionaltity is missing
 
 #drowned: copper ingot
-execute if entity @s[nbt={Item:{id:"minecraft:rotten_flesh",Count:1b}}] if block ~ ~ ~ water if block ~ ~1 ~ water unless entity @e[type=item,nbt={Item:{id:"minecraft:copper_ingot"}},distance=..1] run function trim:full_set/coast/looting/copper
+execute if entity @s[nbt={Item:{id:"minecraft:rotten_flesh",count:1}}] if block ~ ~ ~ water if block ~ ~1 ~ water unless entity @e[type=item,nbt={Item:{id:"minecraft:copper_ingot"}},distance=..1] run function trim:full_set/coast/looting/copper
 #(elder) guardian: fish (loottable) and prismarine crystals - cant be bothered
 #rabbit: foot
-execute if entity @s[nbt={Item:{id:"minecraft:rabbit",Count:1b}}] run function trim:full_set/coast/looting/rabbit_foot
+execute if entity @s[nbt={Item:{id:"minecraft:rabbit",count:1}}] run function trim:full_set/coast/looting/rabbit_foot
 #shulker: shell - same as the gear mobs are wearing
 #wither skeleton: skull
-execute if entity @s[nbt={Item:{id:"minecraft:coal",Count:1b}}] run function trim:full_set/coast/looting/wiske_skull
+execute if entity @s[nbt={Item:{id:"minecraft:coal",count:1}}] run function trim:full_set/coast/looting/wiske_skull
 #zombie (villager)/husk: iron ingot; carrot - cant be bothered
 #zombie piglin: gold ingot
-execute if entity @s[nbt={Item:{id:"minecraft:gold_nugget",Count:1b}}] run function trim:full_set/coast/looting/gold_ingot
+execute if entity @s[nbt={Item:{id:"minecraft:gold_nugget",count:1}}] run function trim:full_set/coast/looting/gold_ingot

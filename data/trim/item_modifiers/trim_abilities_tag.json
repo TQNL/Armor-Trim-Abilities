@@ -1,7 +1,4 @@
-[
-    {
-      "function": "minecraft:set_nbt",
-      "tag": "{trim_abilities:1b}"
-    }
-  ]
-  
+{
+  "function": "minecraft:set_custom_data",
+  "tag": "{trim_abilities:1b}"
+}

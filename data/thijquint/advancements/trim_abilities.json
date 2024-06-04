@@ -1,7 +1,7 @@
 {
   "display": {
     "icon": {
-      "item": "minecraft:eye_armor_trim_smithing_template"
+      "id": "minecraft:eye_armor_trim_smithing_template"
     },
     "title": "Armor Trim Abilities",
     "description": "Adds special powers to armor trims",
