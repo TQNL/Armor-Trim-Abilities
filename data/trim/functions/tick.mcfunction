@@ -11,7 +11,7 @@ scoreboard players reset @a[scores={update_trim_ability=1..}] update_trim_abilit
 # powers: only execute if the player has the proper tag!
 
 #  eye
-execute as @e[type=ender_pearl,nbt={Item:{tag:{trimdatapack:1b}}}] at @s unless entity @p[nbt={SelectedItem:{id:"minecraft:ender_pearl",tag:{trimdatapack:1b}}}] if entity @p[tag=single_eye] run give @p ender_pearl{display:{Name:'{"text":"Unender Pearl","italic":false}'},trimdatapack:1b,Enchantments:[{}]}
+execute as @e[type=ender_pearl,nbt={Item:{tag:{trimdatapack:1b}}}] at @s unless entity @p[nbt={SelectedItem:{id:"minecraft:ender_pearl",tag:{trimdatapack:1b}}}] if entity @p[tag=single_eye] run give @p ender_pearl{display:{Name:'{"text":"Unender Pearl","italic":false}'},trim_abilities:1b,trimdatapack:1b,Enchantments:[{}]}
 execute as @e[type=ender_pearl,nbt={Item:{tag:{trimdatapack:1b}}}] at @s unless entity @p[nbt={SelectedItem:{id:"minecraft:ender_pearl",tag:{trimdatapack:1b}}}] if entity @p[tag=full_set_eye] run function trim:full_set/eye/1
 
 #  coast
