@@ -3,17 +3,9 @@ scoreboard players reset @s trim_deaths
 schedule clear trim:single/dune/saturation
 schedule clear trim:single/silence/inflict_warden_power
 
-# clean up
-kill @e[type=item,nbt={PickupDelay:40s,Item:{tag:{trimdatapack:1b}}}]
-kill @e[type=item,nbt={PickupDelay:40s,Item:{tag:{sentry_trim:1b}}}]
-kill @e[type=item,nbt={PickupDelay:40s,Item:{tag:{spire_trim:1b}}}]
-kill @e[type=item,nbt={PickupDelay:40s,Item:{tag:{silence_trim:1b}}}]
-kill @e[type=item,nbt={PickupDelay:40s,Item:{tag:{trim_sentry_crossbow:1b}}}]
-clear @s ender_pearl{display:{Name:'{"text":"Unender Pearl","italic":false}'},trimdatapack:1b,Enchantments:[{}]}
-clear @s goat_horn{sentry_trim:1b}
-clear @s splash_potion{spire_trim:1b}
-clear @s bow{silence_trim:1b}
-clear @s crossbow{trim_sentry_crossbow:1b}
+# clean up (trimdatapack:1b, spire_trim:1b, sentry_trim:1b, silence_trim:1b, trim_sentry_crossbow:1b all also have trim_abilities:1b)
+kill @e[type=item,nbt={PickupDelay:40s,Item:{components:{"minecraft:custom_data":{trim_abilities:1b}}}}]
+clear @s *[minecraft:custom_data~{trim_abilities:1b}]
 execute if entity @s[tag=single_vex] run effect clear @s jump_boost
 execute if entity @s[tag=single_vex] run effect clear @s slow_falling
 execute if entity @s[tag=full_set_ward] run effect clear @s haste

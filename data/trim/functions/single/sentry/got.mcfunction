@@ -1,3 +1,3 @@
 tag @s add single_sentry
-execute unless entity @s[tag=trim_got_item] unless entity @s[nbt={SelectedItem:{id:"minecraft:goat_horn",tag:{sentry_trim:1b}}}] run give @s goat_horn{trim_abilities:1b,display:{Name:'{"text":"Pillager War Horn","italic":false}',Lore:['{"text":"Summon 3 pillager on your attacker"}']},sentry_trim:1b,Enchantments:[{}],instrument:"minecraft:seek_goat_horn"} 1
+execute unless entity @s[tag=trim_got_item] unless entity @s[nbt={SelectedItem:{id:"minecraft:goat_horn",components:{"minecraft:custom_data":{sentry_trim:1b}}}}] run give @s goat_horn{trim_abilities:1b,display:{Name:'{"text":"Pillager War Horn","italic":false}',Lore:['{"text":"Summon 3 pillager on your attacker"}']},sentry_trim:1b,Enchantments:[{}],instrument:"minecraft:seek_goat_horn"} 1
 tag @s add trim_got_item
