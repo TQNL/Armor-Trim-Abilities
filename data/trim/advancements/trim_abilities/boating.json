@@ -1,4 +1,5 @@
 {
+  "parent": "trim:trim_abilities/root",
   "criteria": {
     "requirement": {
       "trigger": "minecraft:player_interacted_with_entity",
@@ -8,12 +9,14 @@
             "condition": "minecraft:entity_properties",
             "entity": "this",
             "predicate": {
-              "type": "minecraft:boat"
+              "type": [
+                "minecraft:boat",
+                "minecraft:chest_boat"
+              ]
             }
           }
         ]
       }
     }
-  },
-  "parent": "trim:trim_abilities/root"
+  }
 }

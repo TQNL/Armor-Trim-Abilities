@@ -15,6 +15,12 @@ execute if entity @s[tag=full_set_tide] run effect clear @s water_breathing
 execute if entity @s[tag=full_set_tide] run effect clear @s dolphins_grace
 execute if entity @s[tag=full_set_tide] run effect clear @s conduit_power
 execute if entity @s[tag=single_shaper] run kill @e[tag=trim_block_id_shaper,sort=nearest,limit=1]
+execute as @a[tag=full_set_wild] run attribute @s generic.step_height base set 0.6
+execute as @a[tag=full_set_wild] run attribute @s generic.gravity base set 0.08
+execute as @a[tag=full_set_wild] run attribute @s generic.safe_fall_distance base set 3
+scoreboard players reset @s get_bundle
+scoreboard players reset @s find_way
+scoreboard players reset @s panda_genes
 
 # tag clean up
 tag @s remove trim_snout
