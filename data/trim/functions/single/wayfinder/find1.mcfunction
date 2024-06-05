@@ -7,7 +7,7 @@ data remove storage trim_abilities:wayfinder check_succes
 data remove storage trim_abilities:wayfinder distance_magnitude
 data remove storage trim_abilities:wayfinder distance
 
-data modify storage trim_abilities:wayfinder command set from entity @s SelectedItem.tag.pages[0]
+data modify storage trim_abilities:wayfinder command set from entity @s SelectedItem.components."minecraft:writable_book_content".pages[0].raw
 data modify storage trim_abilities:wayfinder check_locate set string storage trim_abilities:wayfinder command 0 6
 execute store success score @s locate_test run data modify storage trim_abilities:wayfinder check_locate set value "locate"
 execute if score @s locate_test matches 1 run return 0

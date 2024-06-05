@@ -1,2 +1,2 @@
-data remove entity @s Item.tag.Trim
-data remove entity @s Item.tag.trim_abilities
+data remove entity @s Item.components."minecraft:trim"
+data remove entity @s Item.components."minecraft:custom_data".trim_abilities

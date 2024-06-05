@@ -1,3 +1,3 @@
-give @p ender_pearl{display:{Name:'{"text":"Unender Pearl","italic":false}'},trim_abilities:1b,trimdatapack:1b,Enchantments:[{}]}
+give @p ender_pearl[enchantment_glint_override=1b,custom_name='{"text":"Unender Pearl","italic":false}',custom_data={trim_abilities_custom_item:1b,trim_abilities_unender_pearl:1b}]
 kill @s
 execute as @p at @s anchored eyes positioned ^ ^ ^ anchored feet run function trim:full_set/eye/2

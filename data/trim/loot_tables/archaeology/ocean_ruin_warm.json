@@ -6,35 +6,23 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "minecraft:angler_pottery_sherd"
+          "name": "minecraft:angler_pottery_sherd",
+          "weight": 2
         },
         {
           "type": "minecraft:item",
-          "name": "minecraft:shelter_pottery_sherd"
+          "name": "minecraft:shelter_pottery_sherd",
+          "weight": 2
         },
         {
           "type": "minecraft:item",
-          "name": "minecraft:snort_pottery_sherd"
+          "name": "minecraft:snort_pottery_sherd",
+          "weight": 2
         },
         {
           "type": "minecraft:item",
-          "name": "minecraft:sniffer_egg"
-        },
-        {
-          "type": "minecraft:item",
-          "name": "minecraft:angler_pottery_sherd"
-        },
-        {
-          "type": "minecraft:item",
-          "name": "minecraft:shelter_pottery_sherd"
-        },
-        {
-          "type": "minecraft:item",
-          "name": "minecraft:snort_pottery_sherd"
-        },
-        {
-          "type": "minecraft:item",
-          "name": "minecraft:sniffer_egg"
+          "name": "minecraft:sniffer_egg",
+          "weight": 2
         },
         {
           "type": "minecraft:item",
