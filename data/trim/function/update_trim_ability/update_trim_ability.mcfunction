@@ -23,9 +23,8 @@ scoreboard players reset @s find_way
 scoreboard players reset @s panda_genes
 
 # tag clean up
+#tag @s remove trim_got_item
 tag @s remove trim_snout
-tag @s remove trim_debug_stick
-tag @s remove trim_got_item
 tag @s remove full_set_coast
 tag @s remove single_coast
 tag @s remove full_set_dune
