@@ -2,7 +2,7 @@
   "type": "minecraft:archaeology",
   "pools": [
     {
-      "bonus_rolls": 0.0,
+      "bonus_rolls": 0.1,
       "entries": [
         {
           "type": "minecraft:item",

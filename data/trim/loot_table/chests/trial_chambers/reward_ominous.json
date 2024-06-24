@@ -2,27 +2,27 @@
   "type": "minecraft:chest",
   "pools": [
     {
-      "bonus_rolls": 0.0,
+      "bonus_rolls": 0.1,
       "entries": [
         {
           "type": "minecraft:loot_table",
-          "value": "minecraft:chests/trial_chambers/reward_rare",
+          "value": "minecraft:chests/trial_chambers/reward_ominous_rare",
           "weight": 8
         },
         {
           "type": "minecraft:loot_table",
-          "value": "minecraft:chests/trial_chambers/reward_common",
+          "value": "minecraft:chests/trial_chambers/reward_ominous_common",
           "weight": 2
         }
       ],
       "rolls": 1.0
     },
     {
-      "bonus_rolls": 0.0,
+      "bonus_rolls": 0.1,
       "entries": [
         {
           "type": "minecraft:loot_table",
-          "value": "minecraft:chests/trial_chambers/reward_common"
+          "value": "minecraft:chests/trial_chambers/reward_ominous_common"
         }
       ],
       "rolls": {
@@ -32,21 +32,21 @@
       }
     },
     {
-      "bonus_rolls": 0.0,
+      "bonus_rolls": 0.1,
       "conditions": [
         {
-          "chance": 0.25,
+          "chance": 0.75,
           "condition": "minecraft:random_chance"
         }
       ],
       "entries": [
         {
           "type": "minecraft:loot_table",
-          "value": "minecraft:chests/trial_chambers/reward_unique"
+          "value": "minecraft:chests/trial_chambers/reward_ominous_unique"
         }
       ],
       "rolls": 1.0
     }
   ],
-  "random_sequence": "minecraft:chests/trial_chambers/reward"
+  "random_sequence": "minecraft:chests/trial_chambers/reward_ominous"
 }

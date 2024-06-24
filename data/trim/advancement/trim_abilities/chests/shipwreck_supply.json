@@ -9,6 +9,6 @@
     }
   },
   "rewards": {
-    "function": "trim:full_set/coast/1"
+    "function": "trim:full_set/coast/loot/1"
   }
 }
