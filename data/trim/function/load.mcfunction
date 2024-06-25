@@ -16,3 +16,4 @@ scoreboard objectives add find_way trigger
 scoreboard objectives add trim_daytime dummy
 scoreboard objectives add get_bundle trigger
 scoreboard objectives add trial_pot_broken mined:decorated_pot
+scoreboard objectives add trim_flow_slot dummy

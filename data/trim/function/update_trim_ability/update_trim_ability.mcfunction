@@ -21,6 +21,10 @@ execute as @a[tag=full_set_wild] run attribute @s generic.safe_fall_distance bas
 scoreboard players reset @s get_bundle
 scoreboard players reset @s find_way
 scoreboard players reset @s panda_genes
+## this item is allowed to go outside the player, this is just a curtosy, idc if the data pack gets disabled after
+### with the new attribute added, the default ones show up in the data, from the armor, only 1 of each piece can be custom:
+execute if entity @s[tag=single_flow] at @s run function trim:update_trim_ability/reset_flow_armor/init
+execute if entity @s[tag=full_set_flow] at @s run function trim:update_trim_ability/reset_flow_armor/init
 
 # tag clean up
 #tag @s remove trim_got_item
@@ -54,6 +58,11 @@ tag @s remove single_wayfinder
 tag @s remove single_shaper
 tag @s remove single_host
 tag @s remove single_raiser
+tag @s remove single_flow
+tag @s remove full_set_flow
+tag @s remove single_bolt
+tag @s remove full_set_bolt
+## add future tags
 
 execute unless data entity @s Inventory[{Slot:100b}] unless data entity @s Inventory[{Slot:101b}] unless data entity @s Inventory[{Slot:102b}] unless data entity @s Inventory[{Slot:103b}] run return 0
 
