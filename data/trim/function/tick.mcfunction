@@ -68,3 +68,7 @@ execute as @a[scores={get_bundle=1..}] if entity @s[tag=single_shaper] run give 
 scoreboard players reset @a[scores={get_bundle=1..}] get_bundle
 
 # ascendant & host don't need ticked commands
+
+# flow
+execute as @a[tag=full_set_flow] unless data entity @s RootVehicle if predicate {"condition":"minecraft:entity_properties","entity":"this","predicate":{"flags":{"is_on_ground":true}}} run function trim:delete_flow_mount with entity @s
+## particles here (prob won't add)
