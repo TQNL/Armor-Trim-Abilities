@@ -70,5 +70,9 @@ scoreboard players reset @a[scores={get_bundle=1..}] get_bundle
 # ascendant & host don't need ticked commands
 
 # flow
-execute as @a[tag=full_set_flow] unless data entity @s RootVehicle if predicate {"condition":"minecraft:entity_properties","entity":"this","predicate":{"flags":{"is_on_ground":true}}} run function trim:delete_flow_mount with entity @s
+## some commands are in ascendant, to reduce lag
 ## particles here (prob won't add)
+clear @a[tag=full_set_flow] saddle[minecraft:custom_data~{trim_flow_saddle:1b}]
+execute as @a[tag=full_set_flow] on vehicle if entity @s[type=horse,tag=full_set_flow_wind_ball] unless items entity @s horse.saddle saddle[minecraft:custom_data~{trim_flow_saddle:1b}] run item replace entity @s horse.saddle with saddle[minecraft:custom_data={trim_flow_saddle:1b}]
+execute as @a[tag=full_set_flow] at @s on vehicle if items entity @s armor.body * on owner run item replace entity @s player.cursor from entity @n[type=horse,tag=full_set_flow_wind_ball] armor.body
+execute as @a[tag=full_set_flow] at @s on vehicle if items entity @s armor.body * run item replace entity @s armor.body with air
