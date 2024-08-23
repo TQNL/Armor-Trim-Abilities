@@ -1,6 +1,6 @@
 {
   "condition": "minecraft:entity_properties",
-  "entity": "direct_killer",
+  "entity": "direct_attacker",
   "predicate": {
     "type": "minecraft:player",
     "nbt": "{Tags:[\"full_set_coast\"]}",
@@ -10,7 +10,7 @@
         "predicates": {
           "minecraft:enchantments": [
             {
-              "enchantment": "minecraft:looting",
+              "enchantments": "minecraft:looting",
               "levels": 1
             }
           ]

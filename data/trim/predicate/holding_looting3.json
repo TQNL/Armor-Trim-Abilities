@@ -8,7 +8,7 @@
         "predicates": {
           "minecraft:enchantments": [
             {
-              "enchantment": "minecraft:looting",
+              "enchantments": "minecraft:looting",
               "levels": 3
             }
           ]
