@@ -1,0 +1,19 @@
+{
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "tag": "minecraft:trimmable_armor",
+            "nbt": "{Trim:{}}"
+          }
+        ]
+      }
+    }
+  },
+  "parent": "trim:trim_abilities/root",
+  "rewards": {
+    "function": "trim:update_trim_ability/update_trim_ability"
+  }
+}

@@ -1,0 +1,20 @@
+{
+    "condition": "minecraft:entity_properties",
+    "entity": "direct_killer",
+    "predicate": {
+      "type": "minecraft:player",
+      "nbt": "{Tags:[\"full_set_coast\"]}",
+      "equipment": {
+        "mainhand": {
+          "tag": "minecraft:swords",
+          "enchantments": [
+            {
+              "enchantment": "minecraft:looting",
+              "levels": 1
+            }
+          ]
+        }
+      }
+    }
+  }
+  

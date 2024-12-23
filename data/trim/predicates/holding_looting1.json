@@ -1,0 +1,18 @@
+{
+    "condition": "minecraft:entity_properties",
+    "entity": "this",
+    "predicate": {
+      "equipment": {
+        "mainhand": {
+          "tag": "minecraft:swords",
+          "enchantments": [
+            {
+              "enchantment": "minecraft:looting",
+              "levels": 1
+            }
+          ]
+        }
+      }
+    }
+  }
+  
