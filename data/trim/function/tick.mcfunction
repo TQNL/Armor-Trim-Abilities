@@ -79,11 +79,16 @@ execute as @a[tag=full_set_flow] at @s on vehicle if items entity @s armor.body 
 execute as @e[type=block_display,tag=full_set_flow_wind_ball_display] at @s run tp @s ~ ~ ~ ~5 ~
 
 # bolt
+## these items are meant as selection items for the grid (throwing gets detected at the beginning)
 execute as @a[tag=full_set_bolt] at @s if items entity @s inventory.* *[custom_data~{trim_abilities_bolting:1b}] run clear @s *[custom_data~{trim_abilities_bolting:1b}]
 execute as @a[tag=full_set_bolt] at @s if items entity @s hotbar.* *[custom_data~{trim_abilities_bolting:1b}] run clear @s *[custom_data~{trim_abilities_bolting:1b}]
 execute as @a[tag=full_set_bolt] at @s if items entity @s weapon.offhand *[custom_data~{trim_abilities_bolting:1b}] run clear @s *[custom_data~{trim_abilities_bolting:1b}]
 
-execute as @a[tag=full_set_bolt] at @s if items entity @s player.cursor *[custom_data~{trim_abilities_oxidize:1b}] unless items entity @s player.crafting.0 *[custom_data~{trim_abilities_bolting:1b}] run function trim:full_set/bolt/copper_bolting/1 {slot:0}
-execute as @a[tag=full_set_bolt] at @s if items entity @s player.cursor *[custom_data~{trim_abilities_oxidize:1b}] unless items entity @s player.crafting.1 *[custom_data~{trim_abilities_bolting:1b}] run function trim:full_set/bolt/copper_bolting/1 {slot:1}
-execute as @a[tag=full_set_bolt] at @s if items entity @s player.cursor *[custom_data~{trim_abilities_scrape:1b}] unless items entity @s player.crafting.2 *[custom_data~{trim_abilities_bolting:1b}] run function trim:full_set/bolt/copper_bolting/1 {slot:2}
-execute as @a[tag=full_set_bolt] at @s if items entity @s player.cursor *[custom_data~{trim_abilities_scrape:1b}] unless items entity @s player.crafting.3 *[custom_data~{trim_abilities_bolting:1b}] run function trim:full_set/bolt/copper_bolting/1 {slot:3}
+## detect item
+execute as @a[tag=full_set_bolt,tag=!trim_abilities_bolting] at @s if items entity @s player.crafting.0 * run function trim:full_set/bolt/copper_bolting/1 {slot:0}
+execute as @a[tag=full_set_bolt,tag=!trim_abilities_bolting] at @s if items entity @s player.crafting.1 * run function trim:full_set/bolt/copper_bolting/1 {slot:1}
+execute as @a[tag=full_set_bolt,tag=!trim_abilities_bolting] at @s if items entity @s player.crafting.2 * run function trim:full_set/bolt/copper_bolting/1 {slot:2}
+execute as @a[tag=full_set_bolt,tag=!trim_abilities_bolting] at @s if items entity @s player.crafting.3 * run function trim:full_set/bolt/copper_bolting/1 {slot:3}
+
+## activate options - fullproof and gets you out of soft lock when closing the inventory
+execute as @a[tag=full_set_bolt,tag=trim_abilities_bolting] at @s run function trim:full_set/bolt/copper_bolting/activate
