@@ -19,4 +19,4 @@ scoreboard objectives add get_bundle trigger
 scoreboard objectives add trial_pot_broken mined:decorated_pot
 scoreboard objectives add trim_flow_slot dummy
 scoreboard objectives add trim_bolt_slot dummy
-scoreboard objectives add trim_string_flag dummy
+scoreboard objectives add trim_flag dummy
