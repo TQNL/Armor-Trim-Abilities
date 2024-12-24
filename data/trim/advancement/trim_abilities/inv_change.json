@@ -1,0 +1,11 @@
+{
+  "parent": "trim:trim_abilities/root",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "rewards": {
+    "function": "trim:full_set/bolt/reset_bolt_inv"
+  }
+}

@@ -1,4 +1,5 @@
 tellraw @a {"text": "Loaded Trim Abilities","color": "#00FF00"}
+function trim:update_trim_ability/update_trim_ability
 scoreboard objectives add update_trim_ability trigger
 scoreboard objectives add compare_armor1 dummy
 scoreboard objectives add compare_armor2 dummy
@@ -17,3 +18,5 @@ scoreboard objectives add trim_daytime dummy
 scoreboard objectives add get_bundle trigger
 scoreboard objectives add trial_pot_broken mined:decorated_pot
 scoreboard objectives add trim_flow_slot dummy
+scoreboard objectives add trim_bolt_slot dummy
+scoreboard objectives add trim_string_flag dummy

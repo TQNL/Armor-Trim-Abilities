@@ -1,9 +1,12 @@
-execute summon item_display run item replace entity @s contents from entity @p weapon.offhand
-data remove entity @n[type=item_display] item.components."minecraft:attribute_modifiers".modifiers[{id:"trim:safe_fall_distance"}]
-data remove entity @n[type=item_display] item.components."minecraft:custom_data".single_flow
-execute as @n[type=item_display] if data entity @s {item:{components:{"minecraft:attribute_modifiers":{modifiers:[{type:"minecraft:generic.armor"},{type:"minecraft:generic.armor_toughness"},{type:"minecraft:generic.knockback_resistance"}]}}}} run function trim:update_trim_ability/reset_flow_armor/2
-clear @s *[minecraft:custom_data~{single_flow:1b}]
-item replace entity @s weapon.offhand from entity @n[type=item_display] contents
-kill @n[type=item_display]
+summon item_display ~ ~ ~ {Tags:['trim_abilities_item_placeholder']}
+item replace entity @n[type=item_display,tag=trim_abilities_item_placeholder] contents from entity @s weapon.offhand
+data remove entity @n[type=item_display,tag=trim_abilities_item_placeholder] item.components."minecraft:attribute_modifiers".modifiers[{id:"trim:safe_fall_distance.head"}]
+data remove entity @n[type=item_display,tag=trim_abilities_item_placeholder] item.components."minecraft:attribute_modifiers".modifiers[{id:"trim:safe_fall_distance.chest"}]
+data remove entity @n[type=item_display,tag=trim_abilities_item_placeholder] item.components."minecraft:attribute_modifiers".modifiers[{id:"trim:safe_fall_distance.legs"}]
+data remove entity @n[type=item_display,tag=trim_abilities_item_placeholder] item.components."minecraft:attribute_modifiers".modifiers[{id:"trim:safe_fall_distance.feet"}]
+data remove entity @n[type=item_display,tag=trim_abilities_item_placeholder] item.components."minecraft:custom_data".single_flow
+data remove entity @n[type=item_display,tag=trim_abilities_item_placeholder] item.components."minecraft:custom_data".trim_abilities
+item replace entity @s weapon.offhand from entity @n[type=item_display,tag=trim_abilities_item_placeholder] contents
+kill @n[type=item_display,tag=trim_abilities_item_placeholder]
 scoreboard players reset @s trim_flow_slot
-data remove storage trim_abilities:flow_armor slot
+data remove storage trim_abilities:flow_armor field
