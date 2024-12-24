@@ -4,4 +4,3 @@ execute if items entity @s armor.chest *[minecraft:trim~{pattern:"minecraft:flow
 execute if items entity @s armor.legs *[minecraft:trim~{pattern:"minecraft:flow"}] run item modify entity @s armor.legs [{"function":"minecraft:set_attributes","replace":false,"modifiers":[{"id":"trim:safe_fall_distance.legs","attribute":"minecraft:generic.safe_fall_distance","amount":3,"operation":"add_value","slot":"legs"}]},{"function":"minecraft:set_custom_data","tag":"{single_flow:{legs:1b}}"}]
 execute if items entity @s armor.feet *[minecraft:trim~{pattern:"minecraft:flow"}] run item modify entity @s armor.feet [{"function":"minecraft:set_attributes","replace":false,"modifiers":[{"id":"trim:safe_fall_distance.feet","attribute":"minecraft:generic.safe_fall_distance","amount":3,"operation":"add_value","slot":"feet"}]},{"function":"minecraft:set_custom_data","tag":"{single_flow:{feet:1b}}"}]
 # doesn't need to get removed, and disabling the data pack is not my problem
-say flowing
