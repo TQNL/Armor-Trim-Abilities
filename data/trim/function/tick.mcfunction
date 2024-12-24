@@ -77,3 +77,13 @@ execute as @a[tag=full_set_flow] on vehicle if entity @s[type=horse,tag=full_set
 execute as @a[tag=full_set_flow] at @s on vehicle if items entity @s armor.body * on owner run item replace entity @s player.cursor from entity @n[type=horse,tag=full_set_flow_wind_ball] armor.body
 execute as @a[tag=full_set_flow] at @s on vehicle if items entity @s armor.body * run item replace entity @s armor.body with air
 execute as @e[type=block_display,tag=full_set_flow_wind_ball_display] at @s run tp @s ~ ~ ~ ~5 ~
+
+# bolt
+execute as @a[tag=full_set_bolt] at @s if items entity @s inventory.* *[custom_data~{trim_abilities_bolting:1b}] run clear @s *[custom_data~{trim_abilities_bolting:1b}]
+execute as @a[tag=full_set_bolt] at @s if items entity @s hotbar.* *[custom_data~{trim_abilities_bolting:1b}] run clear @s *[custom_data~{trim_abilities_bolting:1b}]
+execute as @a[tag=full_set_bolt] at @s if items entity @s weapon.offhand *[custom_data~{trim_abilities_bolting:1b}] run clear @s *[custom_data~{trim_abilities_bolting:1b}]
+
+execute as @a[tag=full_set_bolt] at @s if items entity @s player.cursor *[custom_data~{trim_abilities_oxidize:1b}] unless items entity @s player.crafting.0 *[custom_data~{trim_abilities_bolting:1b}] run function trim:full_set/bolt/oxidize/1 {slot:0}
+execute as @a[tag=full_set_bolt] at @s if items entity @s player.cursor *[custom_data~{trim_abilities_oxidize:1b}] unless items entity @s player.crafting.1 *[custom_data~{trim_abilities_bolting:1b}] run function trim:full_set/bolt/oxidize/1 {slot:1}
+execute as @a[tag=full_set_bolt] at @s if items entity @s player.cursor *[custom_data~{trim_abilities_scrape:1b}] unless items entity @s player.crafting.2 *[custom_data~{trim_abilities_bolting:1b}] run function trim:full_set/bolt/scrape/1 {slot:2}
+execute as @a[tag=full_set_bolt] at @s if items entity @s player.cursor *[custom_data~{trim_abilities_scrape:1b}] unless items entity @s player.crafting.3 *[custom_data~{trim_abilities_bolting:1b}] run function trim:full_set/bolt/scrape/1 {slot:3}
