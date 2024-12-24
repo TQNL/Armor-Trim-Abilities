@@ -6,7 +6,8 @@ execute as @a[tag=full_set_ascendant] at @s run effect give @a[distance=..128] r
 schedule function trim:ascendant 6s replace
 
 # flow mount, here for lag
-execute as @e[type=horse,tag=full_set_flow_wind_ball] at @s unless data entity @s Owner run tp @s ~ -200 ~
-execute as @e[type=horse,tag=full_set_flow_wind_ball] at @s on owner run function trim:test_flow with entity @s RootVehicle.Entity
-execute as @e[type=horse,tag=full_set_flow_wind_ball] unless data entity @s RootVehicle.Entity at @s run tp @e[type=horse,tag=full_set_flow_wind_ball] ~ -200 ~
-execute as @e[type=block_display,tag=full_set_flow_wind_ball_display] run function trim:test_flow_display
+execute as @e[type=horse,tag=full_set_flow_wind_ball] at @s on passengers if entity @s[type=player] run tag @n[type=horse,tag=full_set_flow_wind_ball] add full_set_flow_dont_kill
+execute as @e[type=horse,tag=full_set_flow_wind_ball,tag=!full_set_flow_dont_kill] at @s run tp @s ~ ~-200 ~
+tag @e[type=horse,tag=full_set_flow_wind_ball] remove full_set_flow_dont_kill
+## kill block display
+execute as @e[type=block_display,tag=full_set_flow_wind_ball_display] run function trim:full_set/flow/kill_display
