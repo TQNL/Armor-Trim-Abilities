@@ -1,4 +1,4 @@
-execute at @p as @e[type=fishing_bobber,sort=nearest,limit=1] on origin if entity @s[distance=..1] run return 0
+execute at @p as @n[type=fishing_bobber] on origin if entity @s[distance=..1] run return 0
 
 # if they are accompanied by the random_chance_with_looting condition in the mob's loot table.
 
