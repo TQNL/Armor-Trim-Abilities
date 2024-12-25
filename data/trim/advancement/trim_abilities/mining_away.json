@@ -1,0 +1,10 @@
+{
+    "criteria": {
+      "help": {
+        "trigger": "minecraft:item_durability_changed"
+      }
+    },
+    "rewards": {
+      "function": "trim:full_set/coast_new/fortune"
+    }
+  }

@@ -8,6 +8,7 @@ kill @e[type=item,nbt={PickupDelay:40s,Item:{components:{"minecraft:custom_data"
 clear @s *[minecraft:custom_data~{trim_abilities_custom_item:1b}]
 execute if entity @s[tag=single_vex] run effect clear @s jump_boost
 execute if entity @s[tag=single_vex] run effect clear @s slow_falling
+execute if entity @s[tag=full_set_coast] run effect clear @s luck
 execute if entity @s[tag=full_set_ward] run effect clear @s haste
 execute if entity @s[tag=single_host] run effect clear @s hero_of_the_village
 execute if entity @s[tag=single_tide] run effect clear @s water_breathing
