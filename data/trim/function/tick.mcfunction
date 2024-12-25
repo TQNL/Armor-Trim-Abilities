@@ -70,8 +70,12 @@ scoreboard players reset @a[scores={get_bundle=1..}] get_bundle
 # ascendant & host don't need ticked commands
 
 # flow
-## some commands are in ascendant, to reduce lag
-## particles here (prob won't add)
+execute as @e[type=horse,tag=full_set_flow_wind_ball] at @s on passengers if entity @s[type=player] run tag @n[type=horse,tag=full_set_flow_wind_ball] add full_set_flow_dont_kill
+execute as @e[type=horse,tag=full_set_flow_wind_ball,tag=!full_set_flow_dont_kill] at @s run tp @s ~ ~-200 ~
+tag @e[type=horse,tag=full_set_flow_wind_ball] remove full_set_flow_dont_kill
+## kill block display
+execute as @e[type=block_display,tag=full_set_flow_wind_ball_display] run function trim:full_set/flow/kill_display
+
 clear @a[tag=full_set_flow] saddle[minecraft:custom_data~{trim_flow_saddle:1b}]
 execute as @a[tag=full_set_flow] on vehicle if entity @s[type=horse,tag=full_set_flow_wind_ball] unless items entity @s horse.saddle saddle[minecraft:custom_data~{trim_flow_saddle:1b}] run item replace entity @s horse.saddle with saddle[minecraft:custom_data={trim_flow_saddle:1b}]
 execute as @a[tag=full_set_flow] at @s on vehicle if items entity @s armor.body * on owner run item replace entity @s player.cursor from entity @n[type=horse,tag=full_set_flow_wind_ball] armor.body
