@@ -1,0 +1,10 @@
+{
+  "criteria": {
+    "trim:kill_mob": {
+      "trigger": "minecraft:player_killed_entity"
+    }
+  },
+  "rewards": {
+    "function": "trim:full_set/coast_new/looting_add"
+  }
+}
