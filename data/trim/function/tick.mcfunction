@@ -26,7 +26,7 @@ execute as @e[type=item,nbt={Item:{components:{"minecraft:custom_data":{trial_po
 execute as @a[tag=single_coast,advancements={trim:trim_abilities/boating=true}] at @s if block ~ ~-1 ~ water[level=0] run function trim:single/coast_new/1
 execute as @a[tag=full_set_coast_got_looting] run function trim:full_set/coast_new/looting_remove
 ## giving luck in 'got' and removing in update
-execute as @a[tag=full_set_coast_got_fortune] run function trim:full_set/coast_new/fortune_remove
+execute as @a[tag=full_set_coast_got_fortune] run schedule function trim:full_set/coast_new/fortune_remove 1s append
 execute as @a[scores={trial_pot_broken=1..}] at @s run function trim:full_set/coast_new/loot/pot
 execute as @e[type=item,nbt={Item:{components:{"minecraft:custom_data":{trial_pot:1b}}}}] run data remove entity @s Item.components."minecraft:custom_data"
 
