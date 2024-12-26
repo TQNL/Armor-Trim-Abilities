@@ -5,6 +5,6 @@
       }
     },
     "rewards": {
-      "function": "trim:full_set/coast_new/fortune"
+      "function": "trim:full_set/coast_new/fortune_add"
     }
   }
