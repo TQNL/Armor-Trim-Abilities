@@ -18,7 +18,7 @@ execute as @e[type=ender_pearl,nbt={Item:{components:{"minecraft:custom_data":{t
 execute as @a[tag=single_coast,advancements={trim:trim_abilities/boating=true}] at @s if block ~ ~-1 ~ water[level=0] run function trim:single/coast/1
 execute as @a[tag=full_set_coast,nbt=!{Attributes:[{Base:0.0d,Modifiers:[{Name:"effect.minecraft.luck 0"}]}]}] run effect give @s luck 8 0 true
 #####execute as @e[type=item,nbt={Age:0s,PickupDelay:10s}] at @s if entity @p[tag=full_set_coast,distance=..4.5] run function trim:full_set/coast/fortune
-execute as @e[type=item,nbt={Age:0s,PickupDelay:10s}] at @s if entity @e[type=experience_orb,nbt={Age:0s},distance=..1] if entity @p[tag=full_set_coast,predicate=trim:holding_sword,distance=..5] unless block ~ ~ ~ #furnace unless biome ~ ~ ~ deep_dark unless entity @p[advancements={trim:trim_abilities/anti_breeding=true}] unless entity @p[distance=..0.6] unless entity @e[type=villager,distance=..0.6] run function trim:full_set/coast/looting_check
+execute as @e[type=item,nbt={Age:0s,PickupDelay:10s}] at @s if entity @e[type=experience_orb,nbt={Age:0s},distance=..1] if entity @p[tag=full_set_coast,predicate=trim:holding_sword,distance=..5] unless block ~ ~ ~ #trim:furnace unless biome ~ ~ ~ deep_dark unless entity @p[advancements={trim:trim_abilities/anti_breeding=true}] unless entity @p[distance=..0.6] unless entity @e[type=villager,distance=..0.6] run function trim:full_set/coast/looting_check
 execute as @a[scores={trial_pot_broken=1..}] at @s run function trim:full_set/coast/loot/pot
 execute as @e[type=item,nbt={Item:{components:{"minecraft:custom_data":{trial_pot:1b}}}}] run data remove entity @s Item.components."minecraft:custom_data"
 
