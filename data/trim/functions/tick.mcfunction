@@ -48,8 +48,8 @@ execute at @e[tag=trim_piglin_passive_timer,nbt={Age:199}] as @e[type=piglin,sor
 execute as @e[type=potion,nbt={Item:{tag:{spire_trim:1b}}},limit=1] at @s unless entity @p[nbt={SelectedItem:{id:"minecraft:splash_potion",tag:{spire_trim:1b}}}] if entity @p[tag=single_spire] run function trim:single/spire/potion
 execute as @e[tag=trim_spire_effecter] at @s run function trim:single/spire/potion2
 
-execute as @a[tag=full_set_spire,tag=!trim_op_looted] at @s if block ~ ~-3 ~ #air run function trim:full_set/spire/fall_op_loot
-execute as @a[tag=trim_op_looted] at @s unless block ~ ~-1 ~ #air run tag @s remove trim_op_looted
+execute as @a[tag=full_set_spire,tag=!trim_op_looted] at @s if block ~ ~-3 ~ #trim:air run function trim:full_set/spire/fall_op_loot
+execute as @a[tag=trim_op_looted] at @s unless block ~ ~-1 ~ #trim:air run tag @s remove trim_op_looted
 
 # wild (vex & ward don't need ticked commands)
 execute as @a[tag=full_set_wild,predicate=trim:sprinting] at @s positioned ~ 191 ~ if entity @s[distance=..128] at @s positioned ^ ^ ^0.5 if dimension minecraft:overworld unless biome ~ ~ ~ #is_ocean unless biome ~ ~ ~ #is_river positioned over motion_blocking run tp @s ~ ~ ~
