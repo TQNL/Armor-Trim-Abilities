@@ -1,8 +1,0 @@
-{
-  "function": "minecraft:set_enchantments",
-  "enchantments": {
-    "minecraft:fortune": -99
-  },
-  "add": true,
-  "conditions": []
-}
