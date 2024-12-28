@@ -1,4 +1,5 @@
 # limit about of times this function can run for
+execute if score #trim_choose_block_counter trim_flag matches 50..99 run return run function trim:full_set/coast/world_height
 execute if score #trim_choose_block_counter trim_flag matches 100.. run return run function trim:full_set/coast/determine {x:5,z:14}
 
 # need a block to perform operations on, this is to choose a block smartly
