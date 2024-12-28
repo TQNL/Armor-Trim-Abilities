@@ -1,4 +1,4 @@
-tellraw @a {"text": "Loaded Trim Abilities","color": "#00FF00"}
+tellraw @a {"text": "Loaded Armor Trim Abilities","color": "#00FF00"}
 function trim:update_trim_ability/update_trim_ability
 scoreboard objectives add update_trim_ability trigger
 scoreboard objectives add compare_armor1 dummy
