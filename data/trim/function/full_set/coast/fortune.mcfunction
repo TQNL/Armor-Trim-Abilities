@@ -1,12 +1,6 @@
-execute if block ~1 ~ ~ #trim:ore_related run function trim:full_set/coast/fortune2
-execute if block ~1 ~ ~ #trim:ore_related run return 0
-execute if block ~-1 ~ ~ #trim:ore_related run function trim:full_set/coast/fortune2
-execute if block ~-1 ~ ~ #trim:ore_related run return 0
-execute if block ~ ~1 ~ #trim:ore_related run function trim:full_set/coast/fortune2
-execute if block ~ ~1 ~ #trim:ore_related run return 0
-execute if block ~ ~-1 ~ #trim:ore_related run function trim:full_set/coast/fortune2
-execute if block ~ ~-1 ~ #trim:ore_related run return 0
-execute if block ~ ~ ~1 #trim:ore_related run function trim:full_set/coast/fortune2
-execute if block ~ ~ ~1 #trim:ore_related run return 0
-execute if block ~ ~ ~-1 #trim:ore_related run function trim:full_set/coast/fortune2
-execute if block ~ ~ ~-1 #trim:ore_related run return 0
+execute positioned ~1 ~ ~ if function trim:full_set/coast/determine run return run function trim:full_set/coast/fortune2
+execute positioned ~-1 ~ ~ if function trim:full_set/coast/determine run return run function trim:full_set/coast/fortune2
+execute positioned ~ ~1 ~ if function trim:full_set/coast/determine run return run function trim:full_set/coast/fortune2
+execute positioned ~ ~-1 ~ if function trim:full_set/coast/determine run return run function trim:full_set/coast/fortune2
+execute positioned ~ ~ ~1 if function trim:full_set/coast/determine run return run function trim:full_set/coast/fortune2
+execute positioned ~ ~ ~-1 if function trim:full_set/coast/determine run return run function trim:full_set/coast/fortune2

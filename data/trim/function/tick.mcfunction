@@ -14,20 +14,11 @@ scoreboard players reset @a[scores={update_trim_ability=1..}] update_trim_abilit
 execute as @e[type=ender_pearl,nbt={Item:{components:{"minecraft:custom_data":{trim_abilities_unender_pearl:1b}}}}] at @s unless items entity @p hotbar.* ender_pearl[minecraft:custom_data~{trim_abilities_unender_pearl:1b}] unless items entity @p inventory.* ender_pearl[minecraft:custom_data~{trim_abilities_unender_pearl:1b}] if entity @p[tag=single_eye] run give @p ender_pearl[enchantment_glint_override=1b,custom_name='{"text":"Unender Pearl","italic":false}',custom_data={trim_abilities_custom_item:1b,trim_abilities_unender_pearl:1b}]
 execute as @e[type=ender_pearl,nbt={Item:{components:{"minecraft:custom_data":{trim_abilities_unender_pearl:1b}}}}] at @s unless items entity @p hotbar.* ender_pearl[minecraft:custom_data~{trim_abilities_unender_pearl:1b}] unless items entity @p inventory.* ender_pearl[minecraft:custom_data~{trim_abilities_unender_pearl:1b}] if entity @p[tag=full_set_eye] run function trim:full_set/eye/1
 
-#  coast
+# coast
 execute as @a[tag=single_coast,advancements={trim:trim_abilities/boating=true}] at @s if block ~ ~-1 ~ water[level=0] run function trim:single/coast/1
-execute as @a[tag=full_set_coast,nbt=!{Attributes:[{Base:0.0d,Modifiers:[{Name:"effect.minecraft.luck 0"}]}]}] run effect give @s luck 8 0 true
-#####execute as @e[type=item,nbt={Age:0s,PickupDelay:10s}] at @s if entity @p[tag=full_set_coast,distance=..4.5] run function trim:full_set/coast/fortune
-execute as @e[type=item,nbt={Age:0s,PickupDelay:10s}] at @s if entity @e[type=experience_orb,nbt={Age:0s},distance=..1] if entity @p[tag=full_set_coast,predicate=trim:holding_sword,distance=..5] unless block ~ ~ ~ #trim:furnace unless biome ~ ~ ~ deep_dark unless entity @p[advancements={trim:trim_abilities/anti_breeding=true}] unless entity @p[distance=..0.6] unless entity @e[type=villager,distance=..0.6] run function trim:full_set/coast/looting_check
+execute as @a[tag=full_set_coast_got_looting] run function trim:full_set/coast/looting_remove
+execute as @e[type=item,nbt={Age:0s,PickupDelay:10s}] at @s if entity @p[tag=full_set_coast,distance=..4.5] run function trim:full_set/coast/fortune
 execute as @a[scores={trial_pot_broken=1..}] at @s run function trim:full_set/coast/loot/pot
-execute as @e[type=item,nbt={Item:{components:{"minecraft:custom_data":{trial_pot:1b}}}}] run data remove entity @s Item.components."minecraft:custom_data"
-
-# coast_new
-execute as @a[tag=single_coast,advancements={trim:trim_abilities/boating=true}] at @s if block ~ ~-1 ~ water[level=0] run function trim:single/coast_new/1
-execute as @a[tag=full_set_coast_got_looting] run function trim:full_set/coast_new/looting_remove
-## giving luck in 'got' and removing in update
-execute as @e[type=item,nbt={Age:0s,PickupDelay:10s}] at @s if entity @p[tag=full_set_coast,distance=..4.5] run function trim:full_set/coast_new/fortune
-execute as @a[scores={trial_pot_broken=1..}] at @s run function trim:full_set/coast_new/loot/pot
 execute as @e[type=item,nbt={Item:{components:{"minecraft:custom_data":{trial_pot:1b}}}}] run data remove entity @s Item.components."minecraft:custom_data"
 
 # dune (full set)
