@@ -3,5 +3,6 @@ for new updates:
     - insert loot table with bonus roll and its advancement
     - update ore changes and such
     - if ever new copper blocks get added, that like '(waxed_)copper_block' have a unique '_block' suffix, update that in 'function trim:full_set/bolt/copper_bolting/scrape'
-    - if there is a chest boat tag: do in custom tag
-    - if there is a new chest boat variant: do in custom tag
+- if there is a chest boat tag: do in custom tag
+- if there is a new chest boat variant: do in custom tag
+- add new trim tags to update function
