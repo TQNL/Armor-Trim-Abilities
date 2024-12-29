@@ -7,8 +7,7 @@ execute store success score @s compare_armor1 run data modify storage trim_abili
 execute store success score @s compare_armor2 run data modify storage trim_abilities:player_armor chestplate set from storage trim_abilities:player_armor leggings
 execute store success score @s compare_armor3 run data modify storage trim_abilities:player_armor leggings set from storage trim_abilities:player_armor boots
 execute if score @s compare_armor1 matches 0 if score @s compare_armor2 matches 0 if score @s compare_armor3 matches 0 run data modify storage trim_abilities:player_armor trim set string entity @s Inventory[{Slot:100b}].components."minecraft:trim".pattern 10
-execute if score @s compare_armor1 matches 0 if score @s compare_armor2 matches 0 if score @s compare_armor3 matches 0 run function trim:update_trim_ability/full_set_ability with storage trim_abilities:player_armor
-execute if score @s compare_armor1 matches 0 if score @s compare_armor2 matches 0 if score @s compare_armor3 matches 0 run return 0
+execute if score @s compare_armor1 matches 0 if score @s compare_armor2 matches 0 if score @s compare_armor3 matches 0 run return run function trim:update_trim_ability/full_set_ability with storage trim_abilities:player_armor
 
 #  single
 data modify storage trim_abilities:player_armor boots set string entity @s Inventory[{Slot:100b}].components."minecraft:trim".pattern 10
