@@ -9,10 +9,7 @@
             "condition": "minecraft:entity_properties",
             "entity": "this",
             "predicate": {
-              "type": [
-                "minecraft:boat",
-                "minecraft:chest_boat"
-              ]
+              "type": "#trim:boat_types"
             }
           }
         ]
