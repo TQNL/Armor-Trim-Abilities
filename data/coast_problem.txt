@@ -1,0 +1,7 @@
+full coast:
+- can you combine the chest advancements?
+- get loot table and combine inventories
+
+problems
+- advancement requires loot table field (and there are no tags and the chest wouldn't hold like a tag loot table anyway)
+- loot table generalisation not worth it if both can't be done
