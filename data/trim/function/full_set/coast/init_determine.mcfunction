@@ -1,0 +1,1 @@
+return run function trim:full_set/coast/determine with storage operator_block_chooser:choose_block coords

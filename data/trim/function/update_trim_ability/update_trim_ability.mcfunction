@@ -82,8 +82,7 @@ execute if data entity @s Inventory[{Slot:101b}].components."minecraft:trim" run
 execute if data entity @s Inventory[{Slot:100b}].components."minecraft:trim" run item modify entity @s armor.feet trim:trim_abilities_tag
 
 #  full set
-execute if data entity @s Inventory[{Slot:100b}].components."minecraft:trim" if data entity @s Inventory[{Slot:101b}].components."minecraft:trim" if data entity @s Inventory[{Slot:102b}].components."minecraft:trim" if data entity @s Inventory[{Slot:103b}].components."minecraft:trim" run function trim:update_trim_ability/u_t_a_full_armor
-execute if data entity @s Inventory[{Slot:100b}].components."minecraft:trim" if data entity @s Inventory[{Slot:101b}].components."minecraft:trim" if data entity @s Inventory[{Slot:102b}].components."minecraft:trim" if data entity @s Inventory[{Slot:103b}].components."minecraft:trim" run return 0
+execute if data entity @s Inventory[{Slot:100b}].components."minecraft:trim" if data entity @s Inventory[{Slot:101b}].components."minecraft:trim" if data entity @s Inventory[{Slot:102b}].components."minecraft:trim" if data entity @s Inventory[{Slot:103b}].components."minecraft:trim" run return run function trim:update_trim_ability/u_t_a_full_armor
 
 #  single
 data modify storage trim_abilities:player_armor boots set string entity @s Inventory[{Slot:100b}].components."minecraft:trim".pattern 10
