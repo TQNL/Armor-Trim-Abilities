@@ -27,13 +27,26 @@ scoreboard players reset @s panda_genes
 ## reseting flow attributes
 ### sadly the default components can't be hidden again after being exposed, so the armor isn't exactly the same
 ### with the new attribute added, the default ones show up in the data, from the armor, only 1 of each piece can be custom:
-execute unless entity @s[tag=!single_flow,tag=!full_set_flow] if items entity @s inventory.* *[custom_data~{trim_abilities:1b}] at @s run function trim:update_trim_ability/reset_flow_armor/init
-execute unless entity @s[tag=!single_flow,tag=!full_set_flow] if items entity @s hotbar.* *[custom_data~{trim_abilities:1b}] at @s run function trim:update_trim_ability/reset_flow_armor/init
-execute unless entity @s[tag=!single_flow,tag=!full_set_flow] if items entity @s weapon.offhand *[custom_data~{trim_abilities:1b}] at @s run function trim:update_trim_ability/reset_flow_armor/1_offhand
+##########################execute unless entity @s[tag=!single_flow,tag=!full_set_flow] if items entity @s inventory.* *[custom_data~{trim_abilities:1b}] at @s run function trim:update_trim_ability/reset_flow_armor/init
+##########################execute unless entity @s[tag=!single_flow,tag=!full_set_flow] if items entity @s hotbar.* *[custom_data~{trim_abilities:1b}] at @s run function trim:update_trim_ability/reset_flow_armor/init
+##########################execute unless entity @s[tag=!single_flow,tag=!full_set_flow] if items entity @s weapon.offhand *[custom_data~{trim_abilities:1b}] at @s run function trim:update_trim_ability/reset_flow_armor/1_offhand
 ## reseting single bolt attributes
-execute unless entity @s[tag=!single_bolt,tag=!full_set_bolt] if items entity @s inventory.* *[custom_data~{trim_abilities:1b}] at @s run function trim:update_trim_ability/reset_bolt_armor/init
-execute unless entity @s[tag=!single_bolt,tag=!full_set_bolt] if items entity @s hotbar.* *[custom_data~{trim_abilities:1b}] at @s run function trim:update_trim_ability/reset_bolt_armor/init
-execute unless entity @s[tag=!single_bolt,tag=!full_set_bolt] if items entity @s weapon.offhand *[custom_data~{trim_abilities:1b}] at @s run function trim:update_trim_ability/reset_bolt_armor/1_offhand
+##########################execute unless entity @s[tag=!single_bolt,tag=!full_set_bolt] if items entity @s inventory.* *[custom_data~{trim_abilities:1b}] at @s run function trim:update_trim_ability/reset_bolt_armor/init
+##########################execute unless entity @s[tag=!single_bolt,tag=!full_set_bolt] if items entity @s hotbar.* *[custom_data~{trim_abilities:1b}] at @s run function trim:update_trim_ability/reset_bolt_armor/init
+##########################execute unless entity @s[tag=!single_bolt,tag=!full_set_bolt] if items entity @s weapon.offhand *[custom_data~{trim_abilities:1b}] at @s run function trim:update_trim_ability/reset_bolt_armor/1_offhand
+## eventhough you can get this item out of the inventory by dropping, it has no practical use case, so who cares
+
+## this item is allowed to go outside the player, this is just a curtosy, idc if the data pack gets disabled after
+## reseting flow attributes
+### sadly the default components can't be hidden again after being exposed, so the armor isn't exactly the same
+### with the new attribute added, the default ones show up in the data, from the armor, only 1 of each piece can be custom:
+execute unless entity @s[tag=!single_flow,tag=!full_set_flow] if items entity @s inventory.* *[custom_data~{trim_abilities:1b}] at @s run function trim:single/flow/reset_flow_armor
+execute unless entity @s[tag=!single_flow,tag=!full_set_flow] if items entity @s hotbar.* *[custom_data~{trim_abilities:1b}] at @s run function trim:single/flow/reset_flow_armor
+execute unless entity @s[tag=!single_flow,tag=!full_set_flow] if items entity @s weapon.offhand *[custom_data~{trim_abilities:1b}] at @s run function trim:single/flow/reset_flow_armor
+## reseting single bolt attributes
+execute unless entity @s[tag=!single_bolt,tag=!full_set_bolt] if items entity @s inventory.* *[custom_data~{trim_abilities:1b}] at @s run function trim:single/bolt/reset_bolt_armor
+execute unless entity @s[tag=!single_bolt,tag=!full_set_bolt] if items entity @s hotbar.* *[custom_data~{trim_abilities:1b}] at @s run function trim:single/bolt/reset_bolt_armor
+execute unless entity @s[tag=!single_bolt,tag=!full_set_bolt] if items entity @s weapon.offhand *[custom_data~{trim_abilities:1b}] at @s run function trim:single/bolt/reset_bolt_armor
 ## eventhough you can get this item out of the inventory by dropping, it has no practical use case, so who cares
 
 # tag clean up
