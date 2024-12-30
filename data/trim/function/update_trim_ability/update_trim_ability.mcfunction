@@ -19,6 +19,7 @@ execute if entity @s[tag=single_shaper] run kill @n[tag=trim_block_id_shaper]
 execute as @a[tag=full_set_wild] run attribute @s generic.step_height base set 0.6
 execute as @a[tag=full_set_wild] run attribute @s generic.gravity base set 0.08
 execute as @a[tag=full_set_wild] run attribute @s generic.safe_fall_distance base set 3
+execute as @a[tag=full_set_flow] run ride @s dismount
 scoreboard players reset @s get_bundle
 scoreboard players reset @s find_way
 scoreboard players reset @s panda_genes
