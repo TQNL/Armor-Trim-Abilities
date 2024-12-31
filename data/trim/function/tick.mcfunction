@@ -48,8 +48,6 @@ execute as @e[type=piglin,tag=trim_gold_block_batering,nbt={Brain:{memories:{"mi
 execute as @e[type=potion,nbt={Item:{components:{"minecraft:custom_data":{trim_abilities_potion_of_levitation:1b}}}},limit=1] at @s unless items entity @p hotbar.* splash_potion[minecraft:custom_data~{trim_abilities_potion_of_levitation:1b}] unless items entity @p inventory.* splash_potion[minecraft:custom_data~{trim_abilities_potion_of_levitation:1b}] if entity @p[tag=single_spire] run function trim:single/spire/potion
 execute as @a[tag=trim_threw_levi_potion] if data entity @s {active_effects:[{show_icon:1b,id:"minecraft:levitation"}]} run function trim:single/spire/potion2
 execute as @a[tag=trim_threw_levi_potion,nbt={active_effects:[{show_icon:0b,id:"minecraft:unluck",duration:1}]}] run tag @s remove trim_threw_levi_potion
-execute as @a[tag=full_set_spire,tag=!trim_op_looted] at @s if block ~ ~-3 ~ #air run function trim:full_set/spire/fall_op_loot
-execute as @a[tag=trim_op_looted] at @s unless block ~ ~-1 ~ #air run tag @s remove trim_op_looted
 
 # wild (vex, ward & tide don't need ticked commands)
 scoreboard players enable @a panda_genes
