@@ -69,7 +69,8 @@ scoreboard players reset @a[scores={get_bundle=1..}] get_bundle
 
 # flow
 execute as @e[type=horse,tag=full_set_flow_wind_ball] at @s on passengers if entity @s[type=player] run tag @n[type=horse,tag=full_set_flow_wind_ball] add full_set_flow_dont_kill
-execute as @e[type=horse,tag=full_set_flow_wind_ball,tag=!full_set_flow_dont_kill] at @s run tp @s ~ ~-200 ~
+execute as @e[type=horse,tag=full_set_flow_wind_ball,tag=!full_set_flow_dont_kill] at @s unless entity @p[distance=..1] run tp @s ~ ~-200 ~
+## added @p check to make sure the player within 1 block (aka riding it) doesnt tp with
 tag @e[type=horse,tag=full_set_flow_wind_ball] remove full_set_flow_dont_kill
 ## kill block display
 execute as @e[type=block_display,tag=full_set_flow_wind_ball_display] run function trim:full_set/flow/kill_display
