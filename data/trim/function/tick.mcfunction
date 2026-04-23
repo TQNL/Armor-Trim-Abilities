@@ -44,7 +44,7 @@ execute as @e[type=piglin,nbt={Brain:{memories:{"minecraft:admiring_item":{ttl:1
 execute as @e[type=piglin,tag=trim_gold_block_batering,nbt={Brain:{memories:{"minecraft:admiring_item":{ttl:0L}}},equipment:{offhand:{id:"minecraft:gold_block",count:1}}}] at @s run function trim:full_set/snout/gold_block
 
 # spire
-execute as @e[type=splash_potion,nbt={Item:{components:{"minecraft:custom_data":{trim_abilities_potion_of_levitation:1b}}}},limit=1] at @s unless items entity @p hotbar.* splash_potion[minecraft:custom_data~{trim_abilities_potion_of_levitation:1b}] unless items entity @p inventory.* splash_potion[minecraft:custom_data~{trim_abilities_potion_of_levitation:1b}] if entity @p[tag=single_spire] run function trim:single/spire/potion
+execute as @e[type=splash_potion,nbt={Item:{components:{"minecraft:custom_data":{trim_abilities_potion_of_levitation:1b}}}},limit=1] at @s unless items entity @p container.* splash_potion[minecraft:custom_data~{trim_abilities_potion_of_levitation:1b}] if entity @p[tag=single_spire] run function trim:single/spire/potion
 execute as @a[tag=trim_threw_levi_potion] if data entity @s {active_effects:[{show_icon:1b,id:"minecraft:levitation"}]} run function trim:single/spire/potion2
 execute as @a[tag=trim_threw_levi_potion,nbt={active_effects:[{show_icon:0b,id:"minecraft:unluck",duration:1}]}] run tag @s remove trim_threw_levi_potion
 
@@ -82,8 +82,7 @@ execute as @e[type=block_display,tag=full_set_flow_wind_ball_display] at @s run 
 
 # bolt
 ## these items are meant as selection items for the grid (throwing gets detected at the beginning)
-execute as @a[tag=full_set_bolt] at @s if items entity @s inventory.* *[custom_data~{trim_abilities_bolting:1b}] run clear @s *[custom_data~{trim_abilities_bolting:1b}]
-execute as @a[tag=full_set_bolt] at @s if items entity @s hotbar.* *[custom_data~{trim_abilities_bolting:1b}] run clear @s *[custom_data~{trim_abilities_bolting:1b}]
+execute as @a[tag=full_set_bolt] at @s if items entity @s container.* *[custom_data~{trim_abilities_bolting:1b}] run clear @s *[custom_data~{trim_abilities_bolting:1b}]
 execute as @a[tag=full_set_bolt] at @s if items entity @s weapon.offhand *[custom_data~{trim_abilities_bolting:1b}] run clear @s *[custom_data~{trim_abilities_bolting:1b}]
 
 ## detect item
