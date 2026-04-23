@@ -11,7 +11,7 @@ scoreboard players reset @a[scores={update_trim_ability=1..}] update_trim_abilit
 # powers: only execute if the player has the proper tag!
 
 #  eye
-execute as @e[type=ender_pearl,nbt={Item:{components:{"minecraft:custom_data":{trim_abilities_unender_pearl:1b}}}}] at @s unless items entity @p hotbar.* ender_pearl[minecraft:custom_data~{trim_abilities_unender_pearl:1b}] unless items entity @p inventory.* ender_pearl[minecraft:custom_data~{trim_abilities_unender_pearl:1b}] if entity @p[tag=single_eye] run give @p ender_pearl[enchantment_glint_override=1b,custom_name='{"text":"Unender Pearl","italic":false}',custom_data={trim_abilities_custom_item:1b,trim_abilities_unender_pearl:1b}]
+execute as @e[type=ender_pearl,nbt={Item:{components:{"minecraft:custom_data":{trim_abilities_unender_pearl:1b}}}}] at @s unless items entity @p hotbar.* ender_pearl[minecraft:custom_data~{trim_abilities_unender_pearl:1b}] unless items entity @p inventory.* ender_pearl[minecraft:custom_data~{trim_abilities_unender_pearl:1b}] if entity @p[tag=single_eye] run give @p ender_pearl[enchantment_glint_override=1b,custom_name={"text":"Unender Pearl","italic":false},custom_data={trim_abilities_custom_item:1b,trim_abilities_unender_pearl:1b}]
 execute as @e[type=ender_pearl,nbt={Item:{components:{"minecraft:custom_data":{trim_abilities_unender_pearl:1b}}}}] at @s unless items entity @p hotbar.* ender_pearl[minecraft:custom_data~{trim_abilities_unender_pearl:1b}] unless items entity @p inventory.* ender_pearl[minecraft:custom_data~{trim_abilities_unender_pearl:1b}] if entity @p[tag=full_set_eye] run function trim:full_set/eye/1
 
 # coast
