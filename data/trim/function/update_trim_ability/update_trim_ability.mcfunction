@@ -1,3 +1,5 @@
+tag @s remove trim_update_next
+
 advancement revoke @s through trim:trim_abilities/root
 scoreboard players reset @s trim_deaths
 schedule clear trim:single/dune/saturation
