@@ -22,7 +22,7 @@
     },
     "title": "Thij's data packs",
     "description": "All of my data packs",
-    "background": "minecraft:textures/block/green_concrete.png",
+    "background": "minecraft:block/green_concrete",
     "frame": "task",
     "show_toast": true,
     "announce_to_chat": false
