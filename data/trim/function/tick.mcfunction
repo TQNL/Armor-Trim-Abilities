@@ -41,11 +41,11 @@ execute as @e[type=arrow,nbt={inGround:0b}] at @s on origin if entity @s[tag=ful
 # snout
 execute as @e[type=piglin,nbt=!{NoAI:1b}] at @s unless entity @e[tag=trim_piglin_passive_timer,distance=..1] on target if entity @s[tag=trim_snout] as @n[type=piglin] run function trim:single/snout/passify
 execute at @e[tag=trim_piglin_passive_timer,nbt={Age:199}] as @n[type=piglin] run data merge entity @s {NoAI:0b}
-execute as @e[type=piglin,nbt={Brain:{memories:{"minecraft:admiring_item":{ttl:119L}}},HandItems:[{id:"minecraft:gold_block",count:1}]}] if entity @p[tag=full_set_snout,tag=!trim_gold_block_batering] run tag @s add trim_gold_block_batering
-execute as @e[type=piglin,tag=trim_gold_block_batering,nbt={Brain:{memories:{"minecraft:admiring_item":{ttl:0L}}},HandItems:[{id:"minecraft:gold_block",count:1}]}] at @s run function trim:full_set/snout/gold_block
+execute as @e[type=piglin,nbt={Brain:{memories:{"minecraft:admiring_item":{ttl:119L}}},equipment:{offhand:{id:"minecraft:gold_block",count:1}}}] if entity @p[tag=full_set_snout,tag=!trim_gold_block_batering] run tag @s add trim_gold_block_batering
+execute as @e[type=piglin,tag=trim_gold_block_batering,nbt={Brain:{memories:{"minecraft:admiring_item":{ttl:0L}}},equipment:{offhand:{id:"minecraft:gold_block",count:1}}}] at @s run function trim:full_set/snout/gold_block
 
 # spire
-execute as @e[type=potion,nbt={Item:{components:{"minecraft:custom_data":{trim_abilities_potion_of_levitation:1b}}}},limit=1] at @s unless items entity @p hotbar.* splash_potion[minecraft:custom_data~{trim_abilities_potion_of_levitation:1b}] unless items entity @p inventory.* splash_potion[minecraft:custom_data~{trim_abilities_potion_of_levitation:1b}] if entity @p[tag=single_spire] run function trim:single/spire/potion
+execute as @e[type=splash_potion,nbt={Item:{components:{"minecraft:custom_data":{trim_abilities_potion_of_levitation:1b}}}},limit=1] at @s unless items entity @p hotbar.* splash_potion[minecraft:custom_data~{trim_abilities_potion_of_levitation:1b}] unless items entity @p inventory.* splash_potion[minecraft:custom_data~{trim_abilities_potion_of_levitation:1b}] if entity @p[tag=single_spire] run function trim:single/spire/potion
 execute as @a[tag=trim_threw_levi_potion] if data entity @s {active_effects:[{show_icon:1b,id:"minecraft:levitation"}]} run function trim:single/spire/potion2
 execute as @a[tag=trim_threw_levi_potion,nbt={active_effects:[{show_icon:0b,id:"minecraft:unluck",duration:1}]}] run tag @s remove trim_threw_levi_potion
 
