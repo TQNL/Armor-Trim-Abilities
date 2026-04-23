@@ -1,3 +1,6 @@
+# new way of doing the update as oposed to previous versions to cull the amount of calls per tick by the advancement, was causing a loop and proved unpatchable
+execute as @a[tag=trim_update_next] run function trim:update_trim_ability/update_trim_ability
+
 # detect and update throwing of armor or deaths
 execute as @e[type=item,nbt={PickupDelay:40s,Item:{components:{"minecraft:custom_data":{trim_abilities_custom_item:1b}}}}] on origin at @s run function trim:update_trim_ability/update_trim_ability
 execute as @e[type=item] at @s if data entity @s Item.components."minecraft:trim" if block ~ ~-1 ~ grindstone run function trim:update_trim_ability/grindstone
