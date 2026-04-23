@@ -75,23 +75,23 @@ tag @s remove single_bolt
 tag @s remove full_set_bolt
 ## add future tags
 
-execute unless data entity @s Inventory[{Slot:100b}] unless data entity @s Inventory[{Slot:101b}] unless data entity @s Inventory[{Slot:102b}] unless data entity @s Inventory[{Slot:103b}] run return 0
+execute unless data entity @s equipment.feet unless data entity @s equipment.legs unless data entity @s equipment.chest unless data entity @s equipment.head run return 0
 
 # mark trimmed armor
-execute if data entity @s Inventory[{Slot:103b}].components."minecraft:trim" run item modify entity @s armor.head trim:trim_abilities_tag
-execute if data entity @s Inventory[{Slot:102b}].components."minecraft:trim" run item modify entity @s armor.chest trim:trim_abilities_tag
-execute if data entity @s Inventory[{Slot:101b}].components."minecraft:trim" run item modify entity @s armor.legs trim:trim_abilities_tag
-execute if data entity @s Inventory[{Slot:100b}].components."minecraft:trim" run item modify entity @s armor.feet trim:trim_abilities_tag
+execute if data entity @s equipment.head.components."minecraft:trim" run item modify entity @s armor.head trim:trim_abilities_tag
+execute if data entity @s equipment.chest.components."minecraft:trim" run item modify entity @s armor.chest trim:trim_abilities_tag
+execute if data entity @s equipment.legs.components."minecraft:trim" run item modify entity @s armor.legs trim:trim_abilities_tag
+execute if data entity @s equipment.feet.components."minecraft:trim" run item modify entity @s armor.feet trim:trim_abilities_tag
 
 #  full set
-execute if data entity @s Inventory[{Slot:100b}].components."minecraft:trim" if data entity @s Inventory[{Slot:101b}].components."minecraft:trim" if data entity @s Inventory[{Slot:102b}].components."minecraft:trim" if data entity @s Inventory[{Slot:103b}].components."minecraft:trim" run return run function trim:update_trim_ability/u_t_a_full_armor
+execute if data entity @s equipment.feet.components."minecraft:trim" if data entity @s equipment.legs.components."minecraft:trim" if data entity @s equipment.chest.components."minecraft:trim" if data entity @s equipment.head.components."minecraft:trim" run return run function trim:update_trim_ability/u_t_a_full_armor
 
 #  single
-data modify storage trim_abilities:player_armor boots set string entity @s Inventory[{Slot:100b}].components."minecraft:trim".pattern 10
-data modify storage trim_abilities:player_armor leggings set string entity @s Inventory[{Slot:101b}].components."minecraft:trim".pattern 10
-data modify storage trim_abilities:player_armor chestplate set string entity @s Inventory[{Slot:102b}].components."minecraft:trim".pattern 10
-data modify storage trim_abilities:player_armor helmet set string entity @s Inventory[{Slot:103b}].components."minecraft:trim".pattern 10
-execute if data entity @s Inventory[{Slot:100b}].components."minecraft:trim" run function trim:update_trim_ability/u_t_a_boots with storage trim_abilities:player_armor
-execute if data entity @s Inventory[{Slot:101b}].components."minecraft:trim" run function trim:update_trim_ability/u_t_a_leggings with storage trim_abilities:player_armor
-execute if data entity @s Inventory[{Slot:102b}].components."minecraft:trim" run function trim:update_trim_ability/u_t_a_chestplate with storage trim_abilities:player_armor
-execute if data entity @s Inventory[{Slot:103b}].components."minecraft:trim" run function trim:update_trim_ability/u_t_a_helmet with storage trim_abilities:player_armor
+data modify storage trim_abilities:player_armor boots set string entity @s equipment.feet.components."minecraft:trim".pattern 10
+data modify storage trim_abilities:player_armor leggings set string entity @s equipment.legs.components."minecraft:trim".pattern 10
+data modify storage trim_abilities:player_armor chestplate set string entity @s equipment.chest.components."minecraft:trim".pattern 10
+data modify storage trim_abilities:player_armor helmet set string entity @s equipment.head.components."minecraft:trim".pattern 10
+execute if data entity @s equipment.feet.components."minecraft:trim" run function trim:update_trim_ability/u_t_a_boots with storage trim_abilities:player_armor
+execute if data entity @s equipment.legs.components."minecraft:trim" run function trim:update_trim_ability/u_t_a_leggings with storage trim_abilities:player_armor
+execute if data entity @s equipment.chest.components."minecraft:trim" run function trim:update_trim_ability/u_t_a_chestplate with storage trim_abilities:player_armor
+execute if data entity @s equipment.head.components."minecraft:trim" run function trim:update_trim_ability/u_t_a_helmet with storage trim_abilities:player_armor
