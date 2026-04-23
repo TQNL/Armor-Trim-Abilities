@@ -1,10 +1,12 @@
 {
-  "pack": {
-    "pack_format": 57,
-    "description": "Adds a base power and full set power to every Armor Trim. Each power tackles a different gameplay mechanic. By ThijquintNL.",
-    "supported_formats": {
-      "min_inclusive": 57,
-      "max_inclusive": 61
+    "pack": {
+        "pack_format": 71,
+        "description": "Adds a base power and full set power to every Armor Trim. Each power tackles a different gameplay mechanic. By ThijquintNL.",
+        "min_format": 71,
+        "max_format": 9999,
+        "supported_formats": {
+            "min_inclusive": 71,
+            "max_inclusive": 9999
+        }
     }
-  }
 }
