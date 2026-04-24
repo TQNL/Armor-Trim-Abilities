@@ -30,7 +30,7 @@ scoreboard players reset @s panda_genes
 ## reseting flow attributes
 ### sadly the default components can't be hidden again after being exposed, so the armor isn't exactly the same
 ### with the new attribute added, the default ones show up in the data, from the armor, only 1 of each piece can be custom:
-execute unless entity @s[tag=!single_flow,tag=!full_set_flow] if items entity @s container.* *[custom_data~{trim_abilities:1b}] at @s run function trim:single/flow/reset_flow_armor {slot_type:"inventory."}
+execute unless entity @s[tag=!single_flow,tag=!full_set_flow] if items entity @s container.* *[custom_data~{trim_abilities:1b}] at @s run function trim:single/flow/reset_flow_armor {slot_type:"container."}
 execute unless entity @s[tag=!single_flow,tag=!full_set_flow] if items entity @s weapon.offhand *[custom_data~{trim_abilities:1b}] at @s run function trim:single/flow/reset_flow_armor {slot_type:"weapon."}
 ## reseting single bolt attributes
 execute at @s unless entity @s[tag=!single_bolt,tag=!full_set_bolt] if items entity @s container.* *[custom_data~{trim_abilities:1b}] at @s run function trim:single/bolt/reset_bolt_armor {slot_type:"container."}
