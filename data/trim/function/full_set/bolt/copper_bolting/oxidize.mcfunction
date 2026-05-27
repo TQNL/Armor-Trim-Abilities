@@ -10,6 +10,6 @@ $execute unless data storage trim_abilities:copper_bolting {root:{slot:0}} run i
 
 tag @s add trim_abilities_bolting
 
-item replace entity @s player.crafting.1 with blaze_powder[enchantment_glint_override=true,custom_name='"Oxidize"',custom_data={trim_abilities_bolting:1b,trim_abilities_oxidize:1b,trim_abilities_custom_item:1b},lore=['"Becomes a ghost item"','"when closing inventory :/"']]
-item replace entity @s player.crafting.3 with grindstone[enchantment_glint_override=true,custom_name='"Scrape"',custom_data={trim_abilities_bolting:1b,trim_abilities_scrape:1b,trim_abilities_custom_item:1b},lore=['"Becomes a ghost item"','"when closing inventory :/"']]
-item replace entity @s player.crafting.2 with stick[enchantment_glint_override=true,custom_name='"Cancel"',custom_data={trim_abilities_bolting:1b,trim_abilities_cancel:1b,trim_abilities_custom_item:1b},lore=['"Becomes a ghost item"','"when closing inventory :/"']]
+item replace entity @s player.crafting.1 with blaze_powder[enchantment_glint_override=true,custom_name="Oxidize",custom_data={trim_abilities_bolting:1b,trim_abilities_oxidize:1b,trim_abilities_custom_item:1b},lore=["Becomes a ghost item","when closing inventory :/"]]
+item replace entity @s player.crafting.3 with grindstone[enchantment_glint_override=true,custom_name="Scrape",custom_data={trim_abilities_bolting:1b,trim_abilities_scrape:1b,trim_abilities_custom_item:1b},lore=["Becomes a ghost item","when closing inventory :/"]]
+item replace entity @s player.crafting.2 with stick[enchantment_glint_override=true,custom_name="Cancel",custom_data={trim_abilities_bolting:1b,trim_abilities_cancel:1b,trim_abilities_custom_item:1b},lore=["Becomes a ghost item","when closing inventory :/"]]
