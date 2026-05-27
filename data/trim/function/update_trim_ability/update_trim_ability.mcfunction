@@ -1,7 +1,11 @@
 tag @s remove trim_update_next
-
 advancement revoke @s through trim:trim_abilities/root
 scoreboard players reset @s trim_deaths
+
+# filter for if armor changed while riding wind charge vehicle by e.g. taking damage
+execute if entity @s[tag=full_set_flow] on vehicle if entity @s[type=horse,tag=full_set_flow_wind_ball] run return 0
+
+# main
 schedule clear trim:single/dune/saturation
 schedule clear trim:single/silence/inflict_warden_power
 
