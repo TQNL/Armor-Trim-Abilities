@@ -45,6 +45,7 @@ execute as @e[type=piglin,nbt=!{NoAI:1b}] at @s unless entity @e[tag=trim_piglin
 execute at @e[tag=trim_piglin_passive_timer,nbt={Age:199}] as @n[type=piglin] run data merge entity @s {NoAI:0b}
 execute as @e[type=piglin,nbt={Brain:{memories:{"minecraft:admiring_item":{ttl:119L}}},equipment:{offhand:{id:"minecraft:gold_block",count:1}}}] if entity @p[tag=full_set_snout,tag=!trim_gold_block_batering] run tag @s add trim_gold_block_batering
 execute as @e[type=piglin,tag=trim_gold_block_batering,nbt={Brain:{memories:{"minecraft:admiring_item":{ttl:0L}}},equipment:{offhand:{id:"minecraft:gold_block",count:1}}}] at @s run function trim:full_set/snout/gold_block
+execute as @e[type=piglin,nbt={equipment:{offhand:{id:"minecraft:gold_block",count:1}},NoAI:1b}] run data merge entity @s {NoAI:0b}
 
 # spire: changing the potion to a marker effect here to let the item display properly
 execute as @e[type=splash_potion,nbt={Item:{components:{"minecraft:custom_data":{trim_abilities_potion_of_levitation:1b}}}}] if data entity @s Item.components."minecraft:potion_contents".custom_effects[{id:"minecraft:levitation"}] run function trim:single/spire/potion/convert_to_marker
