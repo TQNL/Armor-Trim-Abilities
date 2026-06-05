@@ -1,7 +1,6 @@
 {
     "values": [
-        "trim:load",
-        "operator_block_chooser:load_choose_block"
+        "trim:load"
  ],
  "by ThijquintNL": []
 }

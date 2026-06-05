@@ -1,1 +1,0 @@
-scoreboard objectives add operator_block_chooser dummy
