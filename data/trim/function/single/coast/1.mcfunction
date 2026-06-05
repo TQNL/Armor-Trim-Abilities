@@ -1,7 +1,5 @@
 # disable ability
-execute if predicate trim:left_boat run advancement revoke @s only trim:trim_abilities/boating
-execute if predicate trim:left_boat run advancement revoke @s only trim:trim_abilities/chest_boating
-execute if predicate trim:left_boat run return 0
+execute if predicate trim:left_boat run return run advancement revoke @s only trim:trim_abilities/boating
 
 # enable ability
 execute on vehicle at @s if block ~ ~ ~ water[level=0] run tp @s ~ ~0.47739276496 ~
