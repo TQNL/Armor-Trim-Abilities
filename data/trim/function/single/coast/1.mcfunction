@@ -2,5 +2,5 @@
 execute if predicate trim:left_boat run return run advancement revoke @s only trim:trim_abilities/boating
 
 # enable ability
-execute on vehicle at @s if block ~ ~ ~ water[level=0] run tp @s ~ ~0.47739276496 ~
+execute on vehicle at @s if block ~ ~0.1 ~ water[level=0] run tp @s ~ ~0.47739276496 ~
 execute on vehicle at @s if block ~ ~ ~ air run fill ~-1 ~-1 ~-1 ~1 ~-1 ~1 frosted_ice replace water[level=0]
