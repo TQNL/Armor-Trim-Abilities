@@ -2,7 +2,12 @@
   "parent": "trim:trim_abilities/root",
   "criteria": {
     "requirement": {
-      "trigger": "minecraft:fishing_rod_hooked"
+      "trigger": "minecraft:fishing_rod_hooked",
+      "conditions": {
+        "player": {
+          "nbt": "Tags:[\"full_set_coast\"]"
+        }
+      }
     }
   },
   "rewards": {
