@@ -28,7 +28,7 @@ execute as @a[tag=full_set_dune] unless data entity @s RootVehicle at @s run fun
 
 # rib
 execute at @a[tag=single_rib] as @e[distance=1..5,nbt={Brain:{}}] at @s on attacker as @n unless entity @s[nbt={active_effects:[{id:"minecraft:wither"}]}] run effect give @s wither 10 0 false
-execute at @a[tag=full_set_rib] as @e[distance=1..5,nbt={Brain:{}}] at @s on attacker as @n unless entity @s[nbt={active_effects:[{id:"minecraft:wither"}]}] run function trim:full_set/rib/afflict
+execute at @a[tag=full_set_rib] as @e[distance=1..5,nbt={Brain:{}}] at @s on attacker as @n unless entity @s[nbt={active_effects:[{id:"minecraft:unluck",amplifier:84b},{id:"minecraft:luck",amplifier:23b}]}] run function trim:full_set/rib/afflict
 execute as @a[tag=full_set_rib] run function trim:full_set/rib/benefit
 execute at @a[tag=full_set_rib] as @e[type=#arrows,distance=..2] at @s on origin as @n[type=#arrows] unless entity @s[nbt=!{Fire:-1s}] run data merge entity @s {Fire:2000s}
 execute at @a[tag=full_set_rib] as @a[distance=1..6,nbt={active_effects:[{id:"minecraft:wither",duration:190}]}] at @s run fill ~-2 ~-2 ~-2 ~2 ~2 ~2 air replace fire
