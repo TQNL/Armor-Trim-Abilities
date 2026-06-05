@@ -1,9 +1,9 @@
 scoreboard players reset @s pillager_summon
-execute on attacker at @s run summon pillager ~ ~ ~ {Tags:["sentry_trim"],PatrolLeader:0b,Patrolling:1b,CanJoinRaid:0b,equipment:{mainhand:{id:"minecraft:crossbow",count:1,components:{"minecraft:damage":0}},offhand:{}}}
-execute on attacker at @s run summon pillager ~ ~ ~ {Tags:["sentry_trim"],PatrolLeader:0b,Patrolling:1b,CanJoinRaid:0b,equipment:{mainhand:{id:"minecraft:crossbow",count:1,components:{"minecraft:damage":0}},offhand:{}}}
-execute on attacker at @s run summon pillager ~ ~ ~ {Tags:["sentry_trim"],PatrolLeader:0b,Patrolling:1b,CanJoinRaid:0b,equipment:{mainhand:{id:"minecraft:crossbow",count:1,components:{"minecraft:damage":0}},offhand:{}}}
-execute on attacker at @s run summon pillager ~ ~ ~ {Tags:["sentry_trim"],PatrolLeader:0b,Patrolling:1b,CanJoinRaid:0b,equipment:{mainhand:{id:"minecraft:crossbow",count:1,components:{"minecraft:damage":0}},offhand:{}}}
-execute on attacker at @s run summon pillager ~ ~ ~ {Tags:["sentry_trim"],PatrolLeader:0b,Patrolling:1b,CanJoinRaid:0b,equipment:{mainhand:{id:"minecraft:crossbow",count:1,components:{"minecraft:damage":0}},offhand:{}}}
+execute on attacker at @s run summon pillager ~ ~ ~ {Tags:["sentry_trim"],PatrolLeader:0b,Patrolling:1b,CanJoinRaid:0b,equipment:{mainhand:{id:"minecraft:crossbow",count:1,components:{"minecraft:damage":0}}}}
+execute on attacker at @s run summon pillager ~ ~ ~ {Tags:["sentry_trim"],PatrolLeader:0b,Patrolling:1b,CanJoinRaid:0b,equipment:{mainhand:{id:"minecraft:crossbow",count:1,components:{"minecraft:damage":0}}}}
+execute on attacker at @s run summon pillager ~ ~ ~ {Tags:["sentry_trim"],PatrolLeader:0b,Patrolling:1b,CanJoinRaid:0b,equipment:{mainhand:{id:"minecraft:crossbow",count:1,components:{"minecraft:damage":0}}}}
+execute on attacker at @s run summon pillager ~ ~ ~ {Tags:["sentry_trim"],PatrolLeader:0b,Patrolling:1b,CanJoinRaid:0b,equipment:{mainhand:{id:"minecraft:crossbow",count:1,components:{"minecraft:damage":0}}}}
+execute on attacker at @s run summon pillager ~ ~ ~ {Tags:["sentry_trim"],PatrolLeader:0b,Patrolling:1b,CanJoinRaid:0b,equipment:{mainhand:{id:"minecraft:crossbow",count:1,components:{"minecraft:damage":0}}}}
 
 execute as @e[type=pillager,tag=sentry_trim] run function trim:single/sentry/pillager_buffs
 
