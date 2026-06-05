@@ -1,5 +1,4 @@
 {
-  "parent": "trim:trim_abilities/root",
   "criteria": {
     "requirement": {
       "trigger": "minecraft:fishing_rod_hooked",
