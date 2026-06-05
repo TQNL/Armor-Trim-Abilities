@@ -14,7 +14,7 @@ scoreboard players reset @a[scores={update_trim_ability=1..}] update_trim_abilit
 # powers: only execute if the player has the proper tag!
 
 #  eye
-execute as @e[type=ender_pearl,tag=!trim_assessed,nbt={Item:{components:{"minecraft:custom_data":{trim_abilities_unender_pearl:1b}}}}] at @s run function trim:pearl_helper with entity @s
+execute as @e[type=ender_pearl,tag=!trim_assessed,nbt={Item:{components:{"minecraft:custom_data":{trim_abilities_unender_pearl:1b}}}}] at @s on origin run function trim:pearl_helper
 
 # coast
 execute as @a[tag=single_coast,advancements={trim:trim_abilities/boating=true}] at @s if block ~ ~-1 ~ water[level=0] run function trim:single/coast/1
