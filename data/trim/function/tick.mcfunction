@@ -46,10 +46,9 @@ execute at @e[tag=trim_piglin_passive_timer,nbt={Age:199}] as @n[type=piglin] ru
 execute as @e[type=piglin,nbt={Brain:{memories:{"minecraft:admiring_item":{ttl:119L}}},equipment:{offhand:{id:"minecraft:gold_block",count:1}}}] if entity @p[tag=full_set_snout,tag=!trim_gold_block_batering] run tag @s add trim_gold_block_batering
 execute as @e[type=piglin,tag=trim_gold_block_batering,nbt={Brain:{memories:{"minecraft:admiring_item":{ttl:0L}}},equipment:{offhand:{id:"minecraft:gold_block",count:1}}}] at @s run function trim:full_set/snout/gold_block
 
-# spire
-execute as @e[type=splash_potion,nbt={Item:{components:{"minecraft:custom_data":{trim_abilities_potion_of_levitation:1b}}}},limit=1] at @s unless items entity @p container.* splash_potion[minecraft:custom_data~{trim_abilities_potion_of_levitation:1b}] if entity @p[tag=single_spire] run function trim:single/spire/potion
-execute as @a[tag=trim_threw_levi_potion] if data entity @s {active_effects:[{show_icon:1b,id:"minecraft:levitation"}]} run function trim:single/spire/potion2
-execute as @a[tag=trim_threw_levi_potion,nbt={active_effects:[{show_icon:0b,id:"minecraft:unluck",duration:1}]}] run tag @s remove trim_threw_levi_potion
+# spire: changing the potion to a marker effect here to let the item display properly
+execute as @e[type=splash_potion,nbt={Item:{components:{"minecraft:custom_data":{trim_abilities_potion_of_levitation:1b}}}}] if data entity @s Item.components."minecraft:potion_contents".custom_effects[{id:"minecraft:levitation"}] run function trim:single/spire/potion/convert_to_marker
+execute as @a if data entity @s active_effects[{id:"minecraft:luck",amplifier:104b}] if data entity @s active_effects[{id:"minecraft:unluck",amplifier:18b}] run function trim:single/spire/potion/dispatch
 
 # wild (vex, ward & tide don't need ticked commands)
 scoreboard players enable @a panda_genes
