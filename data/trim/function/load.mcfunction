@@ -20,3 +20,10 @@ scoreboard objectives add trial_pot_broken mined:decorated_pot
 scoreboard objectives add trim_flow_slot dummy
 scoreboard objectives add trim_bolt_slot dummy
 scoreboard objectives add trim_flag dummy
+
+# remove old:
+data remove storage trim_abilities:wayfinder command
+data remove storage trim_abilities:wayfinder check_locate
+data remove storage trim_abilities:wayfinder check_succes
+data remove storage trim_abilities:wayfinder distance_magnitude
+data remove storage trim_abilities:wayfinder distance
