@@ -5,6 +5,7 @@ execute if block ~ ~ ~ #trim:chest_or_barrel unless data storage trim_abilities:
 execute if block ~ ~ ~ #trim:chest_or_barrel run return run function trim:full_set/coast/loot/3 with storage trim_abilities:loottables
 
 execute if block ~ ~ ~ vault run data modify storage trim_abilities:loottables vault set string block ~ ~ ~ config.loot_table 10
+execute if block ~ ~ ~ vault unless data storage trim_abilities:loottables vault run data modify storage trim_abilities:loottables vault set value "chests/trial_chambers/reward"
 execute if block ~ ~ ~ vault align xyz positioned ~0.5 ~1 ~0.5 run return run function trim:full_set/coast/loot/vault with storage trim_abilities:loottables
 
 # further raycast, in unsuccesful case
