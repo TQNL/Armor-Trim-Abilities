@@ -109,5 +109,5 @@
       }
     }
   ],
-  "random_sequence": "minecraft:chests/village/village/village/village_fisher"
+  "random_sequence": "minecraft:chests/village/village_fisher"
 }

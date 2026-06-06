@@ -1,0 +1,42 @@
+Coast loot regeneration report (APPLY)
+Generated at: 2026-06-06T13:14:42
+Source data: C:\Users\thijm\Downloads\data
+Datapack data: C:\Users\thijm\AppData\Roaming\.minecraft\saves\Armor Trim Abilities\datapacks\[1.21.2+] Armor Trim Abilities V5.1\data
+Bonus rolls set on every copied pool: 0.1
+
+Copied trim chest loot tables: 55
+Generated container advancements: 48
+Copied tables without advancements: 8
+Excluded dispenser/trap tables: 1
+Vault advancement: preserved from existing datapack
+
+Excluded tables:
+  - minecraft:chests/jungle_temple_dispenser
+
+Copied, but no player_generates_container_loot advancement was generated:
+  - minecraft:chests/trial_chambers/reward
+  - minecraft:chests/trial_chambers/reward_common
+  - minecraft:chests/trial_chambers/reward_ominous
+  - minecraft:chests/trial_chambers/reward_ominous_common
+  - minecraft:chests/trial_chambers/reward_ominous_rare
+  - minecraft:chests/trial_chambers/reward_ominous_unique
+  - minecraft:chests/trial_chambers/reward_rare
+  - minecraft:chests/trial_chambers/reward_unique
+
+Known loot_table categories intentionally ignored by this generator:
+  - archaeology: handled by the suspicious-block archaeology subsystem, not by this generator
+  - blocks: not generated-container loot
+  - dispensers: ignored on purpose: dispenser loot is treated as booby-trap loot, not Coast bonus container loot
+  - entities: not generated-container loot
+  - equipment: not generated-container loot
+  - gameplay: fishing/gameplay loot is handled separately
+  - pots: handled/documented separately by the trial chamber pot override, not by this generator
+  - shearing: not generated-container loot
+  - spawners: not generated-container loot
+
+Output folders regenerated:
+  - C:\Users\thijm\AppData\Roaming\.minecraft\saves\Armor Trim Abilities\datapacks\[1.21.2+] Armor Trim Abilities V5.1\data\trim\loot_table\chests
+  - C:\Users\thijm\AppData\Roaming\.minecraft\saves\Armor Trim Abilities\datapacks\[1.21.2+] Armor Trim Abilities V5.1\data\trim\advancement\trim_abilities\chests
+
+Warnings:
+  - Detected 3 vanilla dispenser loot table(s); ignored intentionally and not copied.
