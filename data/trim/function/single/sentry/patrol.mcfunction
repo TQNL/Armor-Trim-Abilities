@@ -1,14 +1,14 @@
-scoreboard players reset @s pillager_summon
-execute on attacker at @s run summon pillager ~ ~ ~ {Tags:["sentry_trim"],PatrolLeader:0b,Patrolling:1b,CanJoinRaid:0b,equipment:{mainhand:{id:"minecraft:crossbow",count:1,components:{"minecraft:damage":0}}}}
-execute on attacker at @s run summon pillager ~ ~ ~ {Tags:["sentry_trim"],PatrolLeader:0b,Patrolling:1b,CanJoinRaid:0b,equipment:{mainhand:{id:"minecraft:crossbow",count:1,components:{"minecraft:damage":0}}}}
-execute on attacker at @s run summon pillager ~ ~ ~ {Tags:["sentry_trim"],PatrolLeader:0b,Patrolling:1b,CanJoinRaid:0b,equipment:{mainhand:{id:"minecraft:crossbow",count:1,components:{"minecraft:damage":0}}}}
-execute on attacker at @s run summon pillager ~ ~ ~ {Tags:["sentry_trim"],PatrolLeader:0b,Patrolling:1b,CanJoinRaid:0b,equipment:{mainhand:{id:"minecraft:crossbow",count:1,components:{"minecraft:damage":0}}}}
-execute on attacker at @s run summon pillager ~ ~ ~ {Tags:["sentry_trim"],PatrolLeader:0b,Patrolling:1b,CanJoinRaid:0b,equipment:{mainhand:{id:"minecraft:crossbow",count:1,components:{"minecraft:damage":0}}}}
+scoreboard players reset @s trim.pillager_summon
+execute on attacker at @s run summon pillager ~ ~ ~ {Tags:["trim.sentry","smithed.entity"],PatrolLeader:0b,Patrolling:1b,CanJoinRaid:0b,equipment:{mainhand:{id:"minecraft:crossbow",count:1,components:{"minecraft:damage":0}}}}
+execute on attacker at @s run summon pillager ~ ~ ~ {Tags:["trim.sentry","smithed.entity"],PatrolLeader:0b,Patrolling:1b,CanJoinRaid:0b,equipment:{mainhand:{id:"minecraft:crossbow",count:1,components:{"minecraft:damage":0}}}}
+execute on attacker at @s run summon pillager ~ ~ ~ {Tags:["trim.sentry","smithed.entity"],PatrolLeader:0b,Patrolling:1b,CanJoinRaid:0b,equipment:{mainhand:{id:"minecraft:crossbow",count:1,components:{"minecraft:damage":0}}}}
+execute on attacker at @s run summon pillager ~ ~ ~ {Tags:["trim.sentry","smithed.entity"],PatrolLeader:0b,Patrolling:1b,CanJoinRaid:0b,equipment:{mainhand:{id:"minecraft:crossbow",count:1,components:{"minecraft:damage":0}}}}
+execute on attacker at @s run summon pillager ~ ~ ~ {Tags:["trim.sentry","smithed.entity"],PatrolLeader:0b,Patrolling:1b,CanJoinRaid:0b,equipment:{mainhand:{id:"minecraft:crossbow",count:1,components:{"minecraft:damage":0}}}}
 
-execute as @e[type=pillager,tag=sentry_trim] run function trim:single/sentry/pillager_buffs
+execute as @e[type=pillager,tag=trim.sentry] run function trim:single/sentry/pillager_buffs
 
-execute as @e[type=pillager,tag=sentry_trim] at @s run damage @s 1 mob_attack by @n[type=!pillager,type=!player]
-execute on attacker at @e[type=pillager,tag=sentry_trim] run damage @n[type=pillager,tag=sentry_trim] 1 mob_attack by @s
+execute as @e[type=pillager,tag=trim.sentry] at @s run damage @s 1 mob_attack by @n[type=!pillager,type=!player]
+execute on attacker at @e[type=pillager,tag=trim.sentry] run damage @n[type=pillager,tag=trim.sentry] 1 mob_attack by @s
 
 schedule function trim:single/sentry/patrol2 1t
 schedule function trim:single/sentry/patrol2 3t

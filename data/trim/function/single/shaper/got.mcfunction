@@ -1,1 +1,1 @@
-tag @s add single_shaper
+tag @s add trim.single.shaper

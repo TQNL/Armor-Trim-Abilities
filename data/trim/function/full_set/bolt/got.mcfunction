@@ -1,4 +1,4 @@
-tag @s add full_set_bolt
+tag @s add trim.full_set.bolt
 
 function trim:single/bolt/got
-tag @s remove single_bolt
+tag @s remove trim.single.bolt

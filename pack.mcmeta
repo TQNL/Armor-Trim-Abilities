@@ -1,12 +1,16 @@
 {
-    "pack": {
-        "pack_format": 71,
-        "description": "Adds a base power and full set power to every Armor Trim. Each power tackles a different gameplay mechanic. By ThijquintNL.",
-        "min_format": 71,
-        "max_format": 9999,
-        "supported_formats": {
-            "min_inclusive": 71,
-            "max_inclusive": 9999
-        }
+  "pack": {
+    "pack_format": 71,
+    "description": "Adds a base power and full set power to every Armor Trim. Each power tackles a different gameplay mechanic. By ThijquintNL.",
+    "min_format": 71,
+    "max_format": 9999,
+    "supported_formats": {
+      "min_inclusive": 71,
+      "max_inclusive": 9999
     }
+  },
+  "id": "armor-trim-abilities",
+  "__smithed__": {
+    "override": false
+  }
 }

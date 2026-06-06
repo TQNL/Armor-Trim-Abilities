@@ -1,2 +1,2 @@
-tag @s add full_set_coast
+tag @s add trim.full_set.coast
 effect give @s luck infinite 0 true

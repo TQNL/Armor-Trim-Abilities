@@ -1,1 +1,1 @@
-tag @s add single_coast
+tag @s add trim.single.coast

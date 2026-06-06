@@ -1,1 +1,1 @@
-tag @s add single_raiser
+tag @s add trim.single.raiser

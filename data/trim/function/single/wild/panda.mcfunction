@@ -1,4 +1,4 @@
-scoreboard players reset @s panda_genes
+scoreboard players reset @s trim.panda_genes
 execute unless entity @e[type=panda,distance=..50] run return 0
 tellraw @s {"text": "Genes of the closest panda:"}
 tellraw @s [{"text":"MainGene: "},{"nbt":"MainGene","entity":"@n[type=panda]","color":"green"}]

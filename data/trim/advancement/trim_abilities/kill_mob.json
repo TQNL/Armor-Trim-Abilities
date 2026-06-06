@@ -10,7 +10,7 @@
               "entity": "this",
               "predicate": {
                 "type": "minecraft:player",
-                "nbt": "{Tags:[\"single_ward\"]}"
+                "nbt": "{Tags:[\"trim.single.ward\"]}"
               }
             }
           ]

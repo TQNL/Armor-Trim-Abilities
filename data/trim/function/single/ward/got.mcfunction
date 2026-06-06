@@ -1,1 +1,1 @@
-tag @s add single_ward
+tag @s add trim.single.ward

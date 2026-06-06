@@ -1,1 +1,1 @@
-tag @s add single_rib
+tag @s add trim.single.rib

@@ -1,1 +1,1 @@
-tag @s add full_set_vex
+tag @s add trim.full_set.vex

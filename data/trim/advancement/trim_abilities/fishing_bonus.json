@@ -4,7 +4,7 @@
       "trigger": "minecraft:fishing_rod_hooked",
       "conditions": {
         "player": {
-          "nbt": "Tags:[\"full_set_coast\"]"
+          "nbt": "Tags:[\"trim.full_set.coast\"]"
         }
       }
     }

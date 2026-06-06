@@ -1,1 +1,1 @@
-tag @s remove trim_inspired
+tag @s remove trim.inspired

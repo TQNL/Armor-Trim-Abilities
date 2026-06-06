@@ -1,9 +1,9 @@
-tag @s remove trim_update_next
+tag @s remove trim.update_next
 advancement revoke @s through trim:trim_abilities/root
-scoreboard players reset @s trim_deaths
+scoreboard players reset @s trim.deaths
 
 # filter for if armor changed while riding wind charge vehicle by e.g. taking damage
-execute if entity @s[tag=full_set_flow] on vehicle if entity @s[type=horse,tag=full_set_flow_wind_ball] run return 0
+execute if entity @s[tag=trim.full_set.flow] on vehicle if entity @s[type=horse,tag=trim.full_set.flow.wind_ball] run return 0
 
 # main
 schedule clear trim:single/dune/saturation
@@ -12,71 +12,71 @@ schedule clear trim:single/silence/inflict_warden_power
 # clean up (trim_abilities_unender_pearl:1b, trim_abilities_potion_of_levitation:1b, trim_abilities_pillager_war_horn:1b, trim_abilities_sonic_boom:1b, trim_abilities_sentry_crossbow:1b all also have trim_abilities:1b)
 kill @e[type=item,nbt={PickupDelay:40s,Item:{components:{"minecraft:custom_data":{trim_abilities_custom_item:1b}}}}]
 clear @s *[minecraft:custom_data~{trim_abilities_custom_item:1b}]
-execute if entity @s[tag=single_vex] run effect clear @s jump_boost
-execute if entity @s[tag=single_vex] run effect clear @s slow_falling
-execute if entity @s[tag=full_set_coast] run effect clear @s luck
-execute if entity @s[tag=full_set_ward] run effect clear @s haste
-execute if entity @s[tag=single_host] run effect clear @s hero_of_the_village
-execute if entity @s[tag=single_tide] run effect clear @s water_breathing
-execute if entity @s[tag=full_set_tide] run effect clear @s water_breathing
-execute if entity @s[tag=full_set_tide] run effect clear @s dolphins_grace
-execute if entity @s[tag=full_set_tide] run effect clear @s conduit_power
-execute if entity @s[tag=single_shaper] run kill @n[tag=trim_block_id_shaper]
+execute if entity @s[tag=trim.single.vex] run effect clear @s jump_boost
+execute if entity @s[tag=trim.single.vex] run effect clear @s slow_falling
+execute if entity @s[tag=trim.full_set.coast] run effect clear @s luck
+execute if entity @s[tag=trim.full_set.ward] run effect clear @s haste
+execute if entity @s[tag=trim.single.host] run effect clear @s hero_of_the_village
+execute if entity @s[tag=trim.single.tide] run effect clear @s water_breathing
+execute if entity @s[tag=trim.full_set.tide] run effect clear @s water_breathing
+execute if entity @s[tag=trim.full_set.tide] run effect clear @s dolphins_grace
+execute if entity @s[tag=trim.full_set.tide] run effect clear @s conduit_power
+execute if entity @s[tag=trim.single.shaper] run kill @n[tag=trim.block_id_shaper]
 ## 1.20.4: ability to reset got added, but this works fine
-execute as @a[tag=full_set_flow] run ride @s dismount
-execute as @a[tag=full_set_wild] run attribute @s step_height base set 0.6
-execute as @a[tag=full_set_wild] run attribute @s gravity base set 0.08
-execute as @a[tag=full_set_wild] run attribute @s safe_fall_distance base set 3
-scoreboard players reset @s get_bundle
-scoreboard players reset @s find_way
-scoreboard players reset @s panda_genes
+execute as @a[tag=trim.full_set.flow] run ride @s dismount
+execute as @a[tag=trim.full_set.wild] run attribute @s step_height base set 0.6
+execute as @a[tag=trim.full_set.wild] run attribute @s gravity base set 0.08
+execute as @a[tag=trim.full_set.wild] run attribute @s safe_fall_distance base set 3
+scoreboard players reset @s trim.get_bundle
+scoreboard players reset @s trim.find_way
+scoreboard players reset @s trim.panda_genes
 ## this item is allowed to go outside the player, this is just a curtosy, idc if the data pack gets disabled after
 ## reseting flow attributes
 ### sadly the default components can't be hidden again after being exposed, so the armor isn't exactly the same
 ### with the new attribute added, the default ones show up in the data, from the armor, only 1 of each piece can be custom:
-execute unless entity @s[tag=!single_flow,tag=!full_set_flow] if items entity @s container.* *[custom_data~{trim_abilities:1b}] at @s run function trim:single/flow/reset_flow_armor {slot_type:"container."}
-execute unless entity @s[tag=!single_flow,tag=!full_set_flow] if items entity @s weapon.offhand *[custom_data~{trim_abilities:1b}] at @s run function trim:single/flow/reset_flow_armor {slot_type:"weapon."}
+execute unless entity @s[tag=!trim.single.flow,tag=!trim.full_set.flow] if items entity @s container.* *[custom_data~{trim_abilities:1b}] at @s run function trim:single/flow/reset_flow_armor {slot_type:"container."}
+execute unless entity @s[tag=!trim.single.flow,tag=!trim.full_set.flow] if items entity @s weapon.offhand *[custom_data~{trim_abilities:1b}] at @s run function trim:single/flow/reset_flow_armor {slot_type:"weapon."}
 ## reseting single bolt attributes
-execute at @s unless entity @s[tag=!single_bolt,tag=!full_set_bolt] if items entity @s container.* *[custom_data~{trim_abilities:1b}] at @s run function trim:single/bolt/reset_bolt_armor {slot_type:"container."}
-execute at @s unless entity @s[tag=!single_bolt,tag=!full_set_bolt] if items entity @s weapon.offhand *[custom_data~{trim_abilities:1b}] at @s run function trim:single/bolt/reset_bolt_armor {slot_type:"weapon."}
+execute at @s unless entity @s[tag=!trim.single.bolt,tag=!trim.full_set.bolt] if items entity @s container.* *[custom_data~{trim_abilities:1b}] at @s run function trim:single/bolt/reset_bolt_armor {slot_type:"container."}
+execute at @s unless entity @s[tag=!trim.single.bolt,tag=!trim.full_set.bolt] if items entity @s weapon.offhand *[custom_data~{trim_abilities:1b}] at @s run function trim:single/bolt/reset_bolt_armor {slot_type:"weapon."}
 ## eventhough you can get this item out of the inventory by dropping, it has no practical use case, so who cares
 
 # tag clean up
-#tag @s remove trim_got_item
-tag @s remove trim_snout
-tag @s remove full_set_coast
-tag @s remove single_coast
-tag @s remove full_set_dune
-tag @s remove single_dune
-tag @s remove full_set_eye
-tag @s remove single_eye
-tag @s remove full_set_rib
-tag @s remove single_rib
-tag @s remove full_set_sentry
-tag @s remove single_sentry
-tag @s remove full_set_silence
-tag @s remove single_silence
-tag @s remove full_set_snout
-tag @s remove single_snout
-tag @s remove full_set_spire
-tag @s remove single_spire
-tag @s remove full_set_vex
-tag @s remove single_vex
-tag @s remove full_set_ward
-tag @s remove single_ward
-tag @s remove full_set_tide
-tag @s remove single_tide
-tag @s remove full_set_wild
-tag @s remove single_wild
-tag @s remove full_set_ascendant
-tag @s remove single_wayfinder
-tag @s remove single_shaper
-tag @s remove single_host
-tag @s remove single_raiser
-tag @s remove single_flow
-tag @s remove full_set_flow
-tag @s remove single_bolt
-tag @s remove full_set_bolt
+#tag @s remove trim.got_item
+tag @s remove trim.snout
+tag @s remove trim.full_set.coast
+tag @s remove trim.single.coast
+tag @s remove trim.full_set.dune
+tag @s remove trim.single.dune
+tag @s remove trim.full_set.eye
+tag @s remove trim.single.eye
+tag @s remove trim.full_set.rib
+tag @s remove trim.single.rib
+tag @s remove trim.full_set.sentry
+tag @s remove trim.single.sentry
+tag @s remove trim.full_set.silence
+tag @s remove trim.single.silence
+tag @s remove trim.full_set.snout
+tag @s remove trim.single.snout
+tag @s remove trim.full_set.spire
+tag @s remove trim.single.spire
+tag @s remove trim.full_set.vex
+tag @s remove trim.single.vex
+tag @s remove trim.full_set.ward
+tag @s remove trim.single.ward
+tag @s remove trim.full_set.tide
+tag @s remove trim.single.tide
+tag @s remove trim.full_set.wild
+tag @s remove trim.single.wild
+tag @s remove trim.full_set.ascendant
+tag @s remove trim.single.wayfinder
+tag @s remove trim.single.shaper
+tag @s remove trim.single.host
+tag @s remove trim.single.raiser
+tag @s remove trim.single.flow
+tag @s remove trim.full_set.flow
+tag @s remove trim.single.bolt
+tag @s remove trim.full_set.bolt
 ## add future tags
 
 execute unless data entity @s equipment.feet unless data entity @s equipment.legs unless data entity @s equipment.chest unless data entity @s equipment.head run return 0
