@@ -6,3 +6,6 @@ for new updates:
 - if there is a chest boat tag: do in custom tag
 - if there is a new chest boat variant: do in custom tag
 - add new trim tags to update function
+
+python regenerate_coast_loot_datapack_root.py "path\to\data" --apply
+where data folder is from the minecraft jar

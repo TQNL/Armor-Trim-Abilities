@@ -1,6 +1,6 @@
 {
-    "parent": "trim:trim_abilities/root",
-    "criteria": {
+  "parent": "trim:trim_abilities/root",
+  "criteria": {
     "example": {
       "trigger": "minecraft:item_used_on_block",
       "conditions": {

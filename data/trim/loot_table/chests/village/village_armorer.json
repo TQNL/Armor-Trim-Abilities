@@ -52,5 +52,5 @@
       }
     }
   ],
-  "random_sequence": "minecraft:chests/village/village/village/village_armorer"
+  "random_sequence": "minecraft:chests/village/village_armorer"
 }

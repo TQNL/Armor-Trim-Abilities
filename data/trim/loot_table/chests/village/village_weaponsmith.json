@@ -169,7 +169,28 @@
         "max": 8.0,
         "min": 3.0
       }
+    },
+    {
+      "bonus_rolls": 0.1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "functions": [
+            {
+              "add": false,
+              "count": 1.0,
+              "function": "minecraft:set_count"
+            }
+          ],
+          "name": "minecraft:bundle"
+        },
+        {
+          "type": "minecraft:empty",
+          "weight": 2
+        }
+      ],
+      "rolls": 1.0
     }
   ],
-  "random_sequence": "minecraft:chests/village/village/village/village_weaponsmith"
+  "random_sequence": "minecraft:chests/village/village_weaponsmith"
 }
