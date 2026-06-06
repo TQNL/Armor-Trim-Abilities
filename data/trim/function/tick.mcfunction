@@ -19,7 +19,7 @@ execute as @e[type=ender_pearl,tag=!trim_assessed,nbt={Item:{components:{"minecr
 # coast
 execute as @a[tag=single_coast,advancements={trim:trim_abilities/boating=true}] at @s if block ~ ~-1 ~ water[level=0] run function trim:single/coast/1
 execute as @a[tag=full_set_coast_got_looting] run function trim:full_set/coast/looting_remove
-execute as @a[tag=full_set_coast] at @s as @e[type=item,nbt={Age:0s,PickupDelay:10s},distance=..4.5] at @s run function trim:full_set/coast/fortune
+execute at @a[tag=full_set_coast] as @e[type=item,nbt={Age:0s,PickupDelay:10s},distance=..4.5] at @s run function trim:full_set/coast/fortune
 execute as @a[scores={trial_pot_broken=1..}] at @s run function trim:full_set/coast/loot/pot
 execute as @e[type=item,nbt={Item:{components:{"minecraft:custom_data":{trial_pot:1b}}}}] run data remove entity @s Item.components."minecraft:custom_data"
 
