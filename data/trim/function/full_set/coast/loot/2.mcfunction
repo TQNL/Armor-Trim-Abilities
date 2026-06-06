@@ -1,6 +1,7 @@
 # raycast done
+execute if block ~ ~ ~ #trim:chest_or_barrel unless data block ~ ~ ~ LootTable run return fail
 execute if block ~ ~ ~ #trim:chest_or_barrel run data modify storage trim_abilities:loottables chest set string block ~ ~ ~ LootTable 10
-execute if block ~ ~ ~ #trim:chest_or_barrel run data remove block ~ ~ ~ Items
+execute if block ~ ~ ~ #trim:chest_or_barrel unless data storage trim_abilities:loottables chest run return fail
 execute if block ~ ~ ~ #trim:chest_or_barrel run return run function trim:full_set/coast/loot/3 with storage trim_abilities:loottables
 
 execute if block ~ ~ ~ vault run data modify storage trim_abilities:loottables vault set string block ~ ~ ~ config.loot_table 10
