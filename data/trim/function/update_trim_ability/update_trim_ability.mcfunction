@@ -82,10 +82,10 @@ tag @s remove trim.full_set.bolt
 execute unless data entity @s equipment.feet unless data entity @s equipment.legs unless data entity @s equipment.chest unless data entity @s equipment.head run return 0
 
 # mark trimmed armor
-execute if data entity @s equipment.head.components."minecraft:trim" run item modify entity @s armor.head trim:trim_abilities_tag
-execute if data entity @s equipment.chest.components."minecraft:trim" run item modify entity @s armor.chest trim:trim_abilities_tag
-execute if data entity @s equipment.legs.components."minecraft:trim" run item modify entity @s armor.legs trim:trim_abilities_tag
-execute if data entity @s equipment.feet.components."minecraft:trim" run item modify entity @s armor.feet trim:trim_abilities_tag
+execute if data entity @s equipment.head.components."minecraft:trim" run item modify entity @s armor.head {"function":"minecraft:set_custom_data","tag":"{trim_abilities:1b}"}
+execute if data entity @s equipment.chest.components."minecraft:trim" run item modify entity @s armor.chest {"function":"minecraft:set_custom_data","tag":"{trim_abilities:1b}"}
+execute if data entity @s equipment.legs.components."minecraft:trim" run item modify entity @s armor.legs {"function":"minecraft:set_custom_data","tag":"{trim_abilities:1b}"}
+execute if data entity @s equipment.feet.components."minecraft:trim" run item modify entity @s armor.feet {"function":"minecraft:set_custom_data","tag":"{trim_abilities:1b}"}
 
 #  full set
 execute if data entity @s equipment.feet.components."minecraft:trim" if data entity @s equipment.legs.components."minecraft:trim" if data entity @s equipment.chest.components."minecraft:trim" if data entity @s equipment.head.components."minecraft:trim" run return run function trim:update_trim_ability/u_t_a_full_armor
