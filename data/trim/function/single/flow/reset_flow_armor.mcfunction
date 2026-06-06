@@ -15,8 +15,8 @@ data remove storage trim_abilities:reset_armor item.components."minecraft:custom
 
 # test if no data from other sources and then clean components
 data modify storage trim_abilities:reset_armor item.test."minecraft:custom_data" set from storage trim_abilities:reset_armor item.components."minecraft:custom_data"
-execute store success score @s trim_flag run data modify storage trim_abilities:reset_armor item.test."minecraft:custom_data" set value {}
+execute store success score @s trim.flag run data modify storage trim_abilities:reset_armor item.test."minecraft:custom_data" set value {}
 function trim:single/flow/replace_armor_data with storage trim_abilities:reset_armor item
 
 data remove storage trim_abilities:reset_armor item
-scoreboard players reset @s trim_flag
+scoreboard players reset @s trim.flag

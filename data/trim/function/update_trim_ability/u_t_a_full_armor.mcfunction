@@ -3,11 +3,11 @@ data modify storage trim_abilities:player_armor boots set from entity @s equipme
 data modify storage trim_abilities:player_armor leggings set from entity @s equipment.legs.components."minecraft:trim".pattern
 data modify storage trim_abilities:player_armor chestplate set from entity @s equipment.chest.components."minecraft:trim".pattern
 data modify storage trim_abilities:player_armor helmet set from entity @s equipment.head.components."minecraft:trim".pattern
-execute store success score @s compare_armor1 run data modify storage trim_abilities:player_armor helmet set from storage trim_abilities:player_armor chestplate
-execute store success score @s compare_armor2 run data modify storage trim_abilities:player_armor chestplate set from storage trim_abilities:player_armor leggings
-execute store success score @s compare_armor3 run data modify storage trim_abilities:player_armor leggings set from storage trim_abilities:player_armor boots
-execute if score @s compare_armor1 matches 0 if score @s compare_armor2 matches 0 if score @s compare_armor3 matches 0 run data modify storage trim_abilities:player_armor trim set string entity @s equipment.feet.components."minecraft:trim".pattern 10
-execute if score @s compare_armor1 matches 0 if score @s compare_armor2 matches 0 if score @s compare_armor3 matches 0 run return run function trim:update_trim_ability/full_set_ability with storage trim_abilities:player_armor
+execute store success score @s trim.compare1 run data modify storage trim_abilities:player_armor helmet set from storage trim_abilities:player_armor chestplate
+execute store success score @s trim.compare2 run data modify storage trim_abilities:player_armor chestplate set from storage trim_abilities:player_armor leggings
+execute store success score @s trim.compare3 run data modify storage trim_abilities:player_armor leggings set from storage trim_abilities:player_armor boots
+execute if score @s trim.compare1 matches 0 if score @s trim.compare2 matches 0 if score @s trim.compare3 matches 0 run data modify storage trim_abilities:player_armor trim set string entity @s equipment.feet.components."minecraft:trim".pattern 10
+execute if score @s trim.compare1 matches 0 if score @s trim.compare2 matches 0 if score @s trim.compare3 matches 0 run return run function trim:update_trim_ability/full_set_ability with storage trim_abilities:player_armor
 
 #  single
 data modify storage trim_abilities:player_armor boots set string entity @s equipment.feet.components."minecraft:trim".pattern 10

@@ -1,1 +1,1 @@
-tag @s add full_set_rib
+tag @s add trim.full_set.rib

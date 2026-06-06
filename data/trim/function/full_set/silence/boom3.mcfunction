@@ -1,1 +1,1 @@
-tag @a remove trim_boomer
+tag @a remove trim.boomer

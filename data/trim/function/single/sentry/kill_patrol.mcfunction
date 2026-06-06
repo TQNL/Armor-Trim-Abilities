@@ -1,1 +1,1 @@
-execute as @e[type=pillager,tag=sentry_trim] run tag @s add sentry_trim_kill_check
+execute as @e[type=pillager,tag=trim.sentry] run tag @s add trim.sentry.kill_check

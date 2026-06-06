@@ -146,5 +146,89 @@
       ]
     }
   ],
-  "random_sequence": "minecraft:pots/trial_chambers/corridor"
+  "random_sequence": "minecraft:pots/trial_chambers/corridor",
+  "__smithed__": {
+    "rules": [
+      {
+        "type": "append",
+        "target": "pools[0].entries[0].functions",
+        "source": {
+          "value": {
+            "function": "minecraft:set_custom_data",
+            "tag": "{trial_pot:1b}"
+          }
+        }
+      },
+      {
+        "type": "append",
+        "target": "pools[0].entries[1].functions",
+        "source": {
+          "value": {
+            "function": "minecraft:set_custom_data",
+            "tag": "{trial_pot:1b}"
+          }
+        }
+      },
+      {
+        "type": "append",
+        "target": "pools[0].entries[2].functions",
+        "source": {
+          "value": {
+            "function": "minecraft:set_custom_data",
+            "tag": "{trial_pot:1b}"
+          }
+        }
+      },
+      {
+        "type": "append",
+        "target": "pools[0].entries[3].functions",
+        "source": {
+          "value": {
+            "function": "minecraft:set_custom_data",
+            "tag": "{trial_pot:1b}"
+          }
+        }
+      },
+      {
+        "type": "append",
+        "target": "pools[0].entries[4].functions",
+        "source": {
+          "value": {
+            "function": "minecraft:set_custom_data",
+            "tag": "{trial_pot:1b}"
+          }
+        }
+      },
+      {
+        "type": "append",
+        "target": "pools[0].entries[5].functions",
+        "source": {
+          "value": {
+            "function": "minecraft:set_custom_data",
+            "tag": "{trial_pot:1b}"
+          }
+        }
+      },
+      {
+        "type": "append",
+        "target": "pools[0].entries[6].functions",
+        "source": {
+          "value": {
+            "function": "minecraft:set_custom_data",
+            "tag": "{trial_pot:1b}"
+          }
+        }
+      },
+      {
+        "type": "append",
+        "target": "pools[0].entries[7].functions",
+        "source": {
+          "value": {
+            "function": "minecraft:set_custom_data",
+            "tag": "{trial_pot:1b}"
+          }
+        }
+      }
+    ]
+  }
 }

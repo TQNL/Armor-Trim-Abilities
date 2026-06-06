@@ -1,1 +1,1 @@
-tag @s add full_set_spire
+tag @s add trim.full_set.spire

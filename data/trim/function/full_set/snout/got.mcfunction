@@ -1,2 +1,2 @@
-tag @s add full_set_snout
-tag @s add trim_snout
+tag @s add trim.full_set.snout
+tag @s add trim.snout

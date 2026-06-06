@@ -9,5 +9,5 @@ item replace entity @s player.crafting.0 with air
 item replace entity @s player.crafting.1 with air
 item replace entity @s player.crafting.2 with air
 item replace entity @s player.crafting.3 with air
-tag @s remove trim_abilities_bolting
+tag @s remove trim.bolting
 data remove storage trim_abilities:copper_bolting root

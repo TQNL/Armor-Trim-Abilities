@@ -1,1 +1,1 @@
-tag @s add single_wayfinder
+tag @s add trim.single.wayfinder

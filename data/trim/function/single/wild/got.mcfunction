@@ -1,1 +1,1 @@
-tag @s add single_wild
+tag @s add trim.single.wild

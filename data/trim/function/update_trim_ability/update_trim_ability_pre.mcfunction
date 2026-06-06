@@ -1,1 +1,1 @@
-tag @s add trim_update_next
+tag @s add trim.update_next
