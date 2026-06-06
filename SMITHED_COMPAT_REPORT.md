@@ -11,5 +11,3 @@
 - Re-formatted the Minecraft `load` and `tick` function tags to plain vanilla-compatible JSON.
 
 Skipped by request: CMD-prefixing and data pack menu/dialog conventions.
-
-yes this was done by chatgpt I couldn't be bothered
