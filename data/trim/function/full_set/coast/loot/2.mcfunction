@@ -1,4 +1,4 @@
-# raycast done
+# raycast done - wont instantiate if loot table doesnt exist
 execute if block ~ ~ ~ #trim:chest_or_barrel unless data block ~ ~ ~ LootTable run return fail
 execute if block ~ ~ ~ #trim:chest_or_barrel run data modify storage trim_abilities:loottables chest set string block ~ ~ ~ LootTable 10
 execute if block ~ ~ ~ #trim:chest_or_barrel unless data storage trim_abilities:loottables chest run return fail
